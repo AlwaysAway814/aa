@@ -1,0 +1,2669 @@
+
+
+<html>
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css">   
+
+
+
+
+<!-- System wide CSS definition -->
+<script language='javascript'>function beforeUnload(windowname){var info='Some subDo screen has been opened,Please save it first, otherwise the modified data on it will be lost.';var hasChild=false;try{var winopener=window.opener;if (winopener&&typeof winopener=='object'){if (typeof winopener.SubDoFrame=='object'){hasChild=winopener.SubDoFrame.checkOpenedWindow();}else if (typeof winopener.DoFrame=='object'){ hasChild=winopener.DoFrame.checkOpenedWindow(); }}else if (typeof parent.SubDoFrame=='object'){ hasChild=parent.SubDoFrame.checkOpenedWindow();}else if (typeof parent.DoFrame=='object'){ hasChild=parent.DoFrame.checkOpenedWindow();} if (hasChild){return info; }}catch(e){}}</script><Script language="javascript">
+<!--
+var SYS_EXRATE_NOT_SHOW_ERR="FALSE";
+var isFuncFlowActive=false;
+var FLD_CHK_VERIFY='N';
+var SYS_BANK_GROUP="MHBK";
+var SYS_BANK_COUNTRY="US";
+var SYS_MODULE_NAME="IPLC";
+var SYS_MODULE_TYPE="TRANS";
+var SYS_ORI_UNIT_CODE = "MIZUHONY";
+var SYS_PRX_USER_ID = "";
+var SYS_APAR_CUST_IDX = "";
+var SYS_DEBUG_MODE=true;
+var SYS_LCY = "USD";
+var SYS_LCY_2ND ="";
+var SYS_LOCAL_CCY ="USD";
+var SYS_LOGIN_BIC ="MHCBUS33XXX";
+var SYS_PC_UNIT ="MIZUHONY";
+var SYS_CONFIRM_FLAG="false";
+var SYS_FUNCTION_TYPE="PM";
+var SYS_FUNCTION_NAME="IPLC_BeneficiaryResponseToAmd";
+var SYS_FUNCTION_SHORT_NAME="BeneResAmd";
+var SYS_FUNCTION_DESC="Beneficiary Response";
+var SYS_PROCESS_EVENT="";
+var SYS_ORG_FUNCTION_NAME="IPLC_BeneficiaryResponseToAmd";
+var SYS_ORG_FUNCTION_SHORT_NAME="BeneResAmd";
+var SYS_NOW_FUNCTION_NAME="BeneResAmd";
+var SYS_HAS_NEXT_RECORD=false;
+var SYS_FUNCTION_ID="F05030702059";
+var SYS_ORG_FUNCTION_ID="F05030702059";
+var SYS_UI_STYLE="C";
+var SYS_I_EVENT_TIMES = "2";
+var SYS_DATE_FORMAT="MM-dd-yyyy";
+var SYS_AMT_INT_FORMAT=",";
+var SYS_AMT_DEC_FORMAT=".";
+var SYS_BUSI_DATE="03-05-2019";
+var SYS_DATE="06-11-2019";
+var SYS_TIME="10:46:47";
+var SYS_BUSI_UNIT="MIZUHONY";
+var SYS_USER_ID="MZNY_OP1";
+var SYS_ERROR="";
+var SYS_BGD_PARAS="";
+var SSO_LOGOFF_LOCATION = "";
+var SYS_USER_NAME="MZNY_OP1";
+var SYS_USER_EMAIL_ADDR="";
+var SYS_USER_PHONE_NO="";
+var SYS_USER_FAX_NO="";
+var SYS_USER_POSITION_ADDR="";
+var SYS_USER_DEPT_NAME="";
+var SYS_USER_TEAM_NAME="";
+var SYS_AUTH_LEVEL="1";
+var SYS_LOADTEMP_FLAG = false;
+var SYS_CURRENCY= new Array(154);
+SYS_CURRENCY=[["AED","2","AE","6","360"],["AFA","2","AF","6","360"],["ALL","2","AL","6","360"],["AMD","2","AM","6","360"],["ANG","2","AN","6","360"],["AOA","2","AO","6","360"],["ARS","2","AR","6","360"],["ATS","2","AT","6","360"],["AUD","2","AU","6","360"],["AWG","2","AW","6","360"],["AZM","2","AZ","6","360"],["BAM","2","BA","6","360"],["BBD","2","BB","6","360"],["BEF","0","BE","6","360"],["BGN","2","BG","6","360"],["BIF","0","BI","6","360"],["BMD","2","BM","6","360"],["BOB","2","BO","6","360"],["BRL","2","BR","6","360"],["BSD","2","BS","6","360"],["BTN","2","BT","6","360"],["BWP","2","BW","6","360"],["BZD","2","BZ","6","360"],["CAD","2","CA","6","360"],["CDF","2","CD","6","360"],["CHF","2","CH","6","360"],["CLF","2","CL","6","360"],["CNY","2","CN","6","360"],["COP","2","CO","6","360"],["CRC","2","CR","6","360"],["CUP","2","CU","6","360"],["CVE","2","CV","6","360"],["CYP","2","CY","6","360"],["CZK","2","CZ","6","360"],["DEM","2","DE","6","360"],["DKK","2","DK","6","360"],["DOP","2","DO","6","360"],["DZD","2","DZ","6","360"],["ECS","","EC","",""],["EEK","2","EE","6","360"],["EGP","2","EG","6","365"],["ERN","2","ER","6","360"],["ESP","0","AD","6","360"],["ETB","2","ET","6","360"],["EUR","2","US","6","360"],["FIM","2","FI","6","360"],["FJD","2","FJ","6","360"],["FRF","2","AD","6","360"],["GBP","2","GB","6","365"],["GEL","2","GE","6","360"],["GHC","2","GH","6","360"],["GIP","2","GI","6","360"],["GMD","2","GM","6","360"],["GNF","0","GN","6","360"],["GRD","2","GR","6","360"],["GTQ","2","GT","6","360"],["GYD","2","GY","6","360"],["HKD","2","HK","6","360"],["HRK","2","HR","6","360"],["HTG","2","HT","6","360"],["HUF","2","HU","6","360"],["IDR","2","ID","6","360"],["IEP","2","IE","6","360"],["ILS","2","IL","6","360"],["INR","2","IN","6","360"],["IQD","3","IQ","6","360"],["IRR","2","IR","6","360"],["ISK","2","IS","6","360"],["ITL","0","IT","6","360"],["JMD","2","JM","6","360"],["JOD","3","JO","6","360"],["JPY","0","JP","6","360"],["KES","2","KE","6","360"],["KHR","2","KH","6","360"],["KPW","2","KP","6","360"],["KRW","0","KR","6","360"],["KWD","3","KW","6","360"],["KZT","2","KZ","6","360"],["LAK","0","LA","6","360"],["LBP","2","LB","6","360"],["LKR","2","LK","6","360"],["LRD","2","LR","6","360"],["LSL","2","LS","6","360"],["LTL","2","LT","6","360"],["LUF","0","LU","6","360"],["LVL","2","LV","6","360"],["LYD","3","LY","6","360"],["MAD","2","EH","6","360"],["MDL","2","MD","6","360"],["MGF","0","MG","6","360"],["MKD","2","MK","6","360"],["MMK","2","MM","6","360"],["MNT","2","MN","6","360"],["MOP","2","MO","6","360"],["MRO","2","EH","6","360"],["MTL","2","MT","6","360"],["MUR","2","IO","6","360"],["MVR","2","MV","6","360"],["MXP","","MX","",""],["MYR","2","MY","6","360"],["MZM","2","MZ","6","360"],["NAD","2","NA","6","360"],["NGN","2","NG","6","360"],["NIO","2","NI","6","360"],["NLG","2","NL","6","360"],["NOK","2","BV","6","360"],["NPR","2","NP","6","360"],["NZD","2","CK","6","360"],["OMR","3","OM","6","360"],["PAB","2","PA","6","360"],["PEN","2","PE","6","360"],["PHP","2","PH","6","360"],["PKR","2","PK","6","360"],["PLN","2","PL","6","360"],["PYG","0","PY","6","360"],["QAR","2","QA","6","360"],["ROL","2","RO","6","360"],["RON","2","RO","2","360"],["RUB","2","RU","6","360"],["RWF","0","RW","6","360"],["SAR","2","SA","6","360"],["SDD","2","SD","6","360"],["SEK","2","SE","6","360"],["SGD","2","SG","6","365"],["SIT","2","SI","6","360"],["SKK","2","SK","6","360"],["SLL","2","SL","6","360"],["SOS","2","SO","6","360"],["SVC","2","SV","6","360"],["SYP","2","SY","6","360"],["SZL","2","SZ","6","360"],["THB","2","TH","6","360"],["TJS","0","TJ","6","360"],["TMM","2","TM","6","360"],["TND","3","TN","6","360"],["TOP","2","TO","6","360"],["TRL","2","TR","6","360"],["TWD","2","TW","6","360"],["TZS","2","TZ","6","360"],["UAH","2","UA","6","360"],["UGX","0","UG","6","360"],["USD","2","US","6","360"],["UYU","2","UY","6","360"],["UZS","2","UZ","6","360"],["VEB","2","VE","6","360"],["VND","2","VN","6","360"],["VUV","0","VU","6","360"],["XAF","0","CF","6","360"],["XCD","2","AG","6","360"],["YER","2","YE","6","360"],["YUM","2","YU","6","360"],["ZAR","2","SZ","6","360"],["ZMK","2","ZM","6","360"],["ZWD","2","ZW","6","360"]];
+var ADV_BK_NM="ANZ BANK (VIETNAM)  LIMITED";
+var BENE_NM="TEST 0048 BENEFICIARY NAME";
+var CURRNT_STATUS="IPLC_IssueLCAmendOneStep";
+var CLS_FLG="No";
+var WEB_REF="";
+var C_UNIT_CODE="MIZUHONY";
+var C_TRX_REF="ILC-000202-01";
+var LC_NO="ILC-000202";
+var ENCRY_CODE="144E4D4B9AAAF1A2597D667C2E97E984";
+var TL_STATUS="NORMAL";
+var AMD_REF="ILC-000202-01";
+var C_TRX_STATUS="M";
+var LC_AMT="10000.00";
+var _TRX_STATUS="TRXL";
+var C_FUNC_SHORT_NAME="IssuLCAmdOne";
+var DETRMNTL_FLG="Yes";
+var CATALOG_SQL="SELECT C_MAIN_REF,APPL_NM,BENE_NM,LC_CCY,LC_AMT,EXPIRY_DT,ADV_BK_NM,C_UNIT_CODE,I_EVENT_TIMES,C_FUNC_SHORT_NAME,C_TRX_REF,C_TRX_STATUS,LC_NO,CLS_FLG,DETRMNTL_FLG,CURRNT_STATUS,AMD_REF,WEB_REF FROM EXIMTRX.IPLC_EM_AMD WHERE (1=1  AND C_TRX_STATUS =\'M\' AND CLS_FLG =\'No\' AND DETRMNTL_FLG =\'Yes\' AND BENE_CONS_FLG IS NULL AND CURRNT_STATUS =\'IPLC_IssueLCAmendOneStep\'   )    and C_MAIN_REF IN (select C_MAIN_REF from EXIMTRX.IPLC_MASTER where C_TRX_STATUS = \'M\'  AND (C_CP_UNIT_CODE =\'MIZUHONY\' OR C_UNIT_CODE=\'MIZUHONY\' OR C_UNIT_CODE is null OR C_CP_UNIT_CODE is null) )   AND (C_CP_UNIT_CODE =\'MIZUHONY\' OR C_UNIT_CODE=\'MIZUHONY\' OR C_UNIT_CODE is null OR C_CP_UNIT_CODE is null)  ORDER BY AMD_REF";
+var APPL_NM="TEST CUST NAME 5";
+var EXPIRY_DT="2019-04-01";
+var I_EVENT_TIMES="2";
+var RN="1";
+var LC_CCY="USD";
+var C_MAIN_REF="ILC-000202";
+var SYS_AMT_CCY = new Array();
+var SYS_NEW_LOAD_TYPE="";
+//-->
+</script>
+<script language="javascript">
+SYS_AMT_CCY[0]=new Array('LC_CCY','GB_CHG_SWIFT_COMM_AUTO','GB_CHG_OTH_COMM_AUTO','GB_CHG_OPEN_COMM_AUTO','GB_CHG_TTL_OTH_F','DEC_AMT','LC_BAL','GB_CHG_ACCT_COMM_AUTO','NEW_LC_AMT','LC_AMT','RISK_AMT','NEW_LC_BAL','GB_CHG_ACCT_COMM_F_AUTO','NEW_LC_AMT_ACPT','GB_CHG_EXAM_COMM_AUTO','GB_CHG_ACCT_COMM_F','GB_CHG_AMD_COMM_AUTO','GB_CHG_HANDING_COMM_AUTO','INC_AMT','GB_CHG_TTL_OTH_F_AUTO','GB_CHG_POSTAGE_COMM_AUTO');
+SYS_AMT_CCY[1]=new Array('PRES_CCY','PRES_AVAL_BAL');
+</script><script language="javascript">var SYS_AMT_CCY_DOID = new Array();</script>
+<script language="javascript">SYS_AMT_CCY_DOID[0]='D00000000019';</script>
+<script language="javascript">
+var SYS_AMT_CCY_D00000000019 = new Array();
+</script>
+<script language="javascript">
+var SYS_AMT_FIELD = new Array();
+SYS_AMT_FIELD.push('PRES_AVAL_BAL');
+SYS_AMT_FIELD.push('GB_CHG_EXAM_COMM');
+SYS_AMT_FIELD.push('GB_CHG_TTL_OTH_F_AUTO');
+SYS_AMT_FIELD.push('E_UNPAID_ACCEPT_COMM_AMT');
+SYS_AMT_FIELD.push('GB_ALL_OTH_CHG_UNPD');
+SYS_AMT_FIELD.push('E_EPLC_CONFUTIL_CHG_TRX_AMT');
+SYS_AMT_FIELD.push('TEMP_NEW_LC_AMT');
+SYS_AMT_FIELD.push('GB_CHG_ACCT_COMM_F_AUTO');
+SYS_AMT_FIELD.push('GB_CHG_OPEN_COMM');
+SYS_AMT_FIELD.push('E_EPLC_ALLINFLAT_CHG_TRX_AMT');
+SYS_AMT_FIELD.push('E_UNPAID_CONFIRM_COMM_AMT');
+SYS_AMT_FIELD.push('NEW_PRES_AVAL_BAL');
+SYS_AMT_FIELD.push('LC_BAL');
+SYS_AMT_FIELD.push('E_IA_Y_EQVL_INT_ACCEPT');
+SYS_AMT_FIELD.push('GB_CHG_TTL_COMM_F');
+SYS_AMT_FIELD.push('GB_CHG_EXAM_COMM_AUTO');
+SYS_AMT_FIELD.push('LC_BAL_TEMP');
+SYS_AMT_FIELD.push('E_EPLC_UTIL_DEF_CHG_TRX_AMT');
+SYS_AMT_FIELD.push('GB_CHG_TTL');
+SYS_AMT_FIELD.push('DEC_AMT');
+SYS_AMT_FIELD.push('GB_TEL_POST_COU_PD');
+SYS_AMT_FIELD.push('CHG_LOCAL_FX_AMT_CR');
+SYS_AMT_FIELD.push('CHG_LOCAL_FX_AMT_DR');
+SYS_AMT_FIELD.push('GB_CHG_ACCT_COMM');
+SYS_AMT_FIELD.push('TEMP_LC_AMT');
+SYS_AMT_FIELD.push('GB_CHG_TTL_OTH');
+SYS_AMT_FIELD.push('GB_CHG_TTL_TELECOM');
+SYS_AMT_FIELD.push('RISK_AMT');
+SYS_AMT_FIELD.push('NEW_LC_BAL');
+SYS_AMT_FIELD.push('GB_ALL_OTH_CHG_PD');
+SYS_AMT_FIELD.push('TEMP_PRES_AVAL_BAL');
+SYS_AMT_FIELD.push('DEFER_CHG_AMT_LC_COMBINE');
+SYS_AMT_FIELD.push('E_PAID_ACCEPT_COMM_AMT');
+SYS_AMT_FIELD.push('HC_INWARD_BILLS_DIS_AMT_D');
+SYS_AMT_FIELD.push('HC_INWARD_BILLS_DIS_AMT_C');
+SYS_AMT_FIELD.push('E_IA_Y_TRX_AMT');
+SYS_AMT_FIELD.push('GB_MOV_AMT');
+SYS_AMT_FIELD.push('E_PAID_CONFIRM_COMM_AMT');
+SYS_AMT_FIELD.push('E_EPLC_COMBIN_1_CHG_TRX_AMT');
+SYS_AMT_FIELD.push('TEMP_AC_AMT1');
+SYS_AMT_FIELD.push('TEMP_AC_AMT4');
+SYS_AMT_FIELD.push('E_EPLC_COMBIN_2_CHG_TRX_AMT');
+SYS_AMT_FIELD.push('TEMP_AC_AMT5');
+SYS_AMT_FIELD.push('TEMP_AC_AMT2');
+SYS_AMT_FIELD.push('TEMP_AC_AMT3');
+SYS_AMT_FIELD.push('E_IA_Y_PAID_INT');
+SYS_AMT_FIELD.push('GB_CHG_TTL_COMM');
+SYS_AMT_FIELD.push('GB_CHG_OTH_COMM_AUTO');
+SYS_AMT_FIELD.push('GB_MOV_AMT_INC');
+SYS_AMT_FIELD.push('GB_TEL_POST_COU_UNPD');
+SYS_AMT_FIELD.push('GB_CHG_OPEN_COMM_AUTO');
+SYS_AMT_FIELD.push('GB_CHG_TTL_OTH_AUTO');
+SYS_AMT_FIELD.push('GB_CHG_TTL_OTH_F');
+SYS_AMT_FIELD.push('GB_CPYT_CR_AMT_CRCCY');
+SYS_AMT_FIELD.push('GB_TTL_PAY_CHG_AMT_SEP');
+SYS_AMT_FIELD.push('CHG_FOREIGN_FX_AMT_DR');
+SYS_AMT_FIELD.push('CHG_FOREIGN_FX_AMT_CR');
+SYS_AMT_FIELD.push('NEW_LC_AMT_ACPT');
+SYS_AMT_FIELD.push('GB_CHG_ACCT_COMM_AUTO');
+SYS_AMT_FIELD.push('GB_CHG_POSTAGE_COMM');
+SYS_AMT_FIELD.push('E_EPLC_CONF_COMM_TRX_AMT');
+SYS_AMT_FIELD.push('E_IA_Y_EQVL_INT');
+SYS_AMT_FIELD.push('TEMP_CHG_AMT2');
+SYS_AMT_FIELD.push('GB_CHG_SWIFT_COMM_AUTO');
+SYS_AMT_FIELD.push('TEMP_CHG_AMT3');
+SYS_AMT_FIELD.push('TEMP_CHG_AMT1');
+SYS_AMT_FIELD.push('TEMP_CHG_AMT4');
+SYS_AMT_FIELD.push('GB_CHG_ACCT_COMM_F');
+SYS_AMT_FIELD.push('GB_CHG_AMD_COMM_AUTO');
+SYS_AMT_FIELD.push('GB_CPYT_DR_AMT_DRCCY');
+SYS_AMT_FIELD.push('E_GTEE_ISSUE_COMM_TRX_AMT');
+SYS_AMT_FIELD.push('NEW_LC_AMT');
+SYS_AMT_FIELD.push('TEMP_LC_BAL');
+SYS_AMT_FIELD.push('GB_CHG_HANDING_COMM');
+SYS_AMT_FIELD.push('GB_CHG_HANDING_COMM_AUTO');
+SYS_AMT_FIELD.push('INC_AMT');
+SYS_AMT_FIELD.push('GB_CHG_TTL_INCOME');
+SYS_AMT_FIELD.push('GB_CHG_AMD_COMM');
+SYS_AMT_FIELD.push('LC_AMT');
+SYS_AMT_FIELD.push('GB_CHG_SWIFT_COMM');
+SYS_AMT_FIELD.push('GB_CHG_TTL_COMM_AUTO');
+SYS_AMT_FIELD.push('GB_CHG_TTL_ACPT');
+SYS_AMT_FIELD.push('LM_TRX_AMT');
+SYS_AMT_FIELD.push('GB_CHG_OTH_COMM');
+SYS_AMT_FIELD.push('E_IA_Y_REACC_INT');
+SYS_AMT_FIELD.push('GB_CHG_POSTAGE_COMM_AUTO');
+SYS_AMT_FIELD.push('GB_MOV_AMT_DEC');
+SYS_AMT_FIELD.push('GB_CHG_TTL_AUTO');
+SYS_AMT_FIELD.push('GB_TTL_PAY_CHG_AMT');
+var SYS_RATE_FIELD = new Array();
+SYS_RATE_FIELD.push('GB_CFNC_N_RT');
+SYS_RATE_FIELD.push('E_IA_N_FIX_BAS_RATE');
+SYS_RATE_FIELD.push('GB_CPYT_DR_BUY_RATE');
+SYS_RATE_FIELD.push('GB_CPYT_CR_BUY_RATE');
+SYS_RATE_FIELD.push('GB_CFNC_N_MARGIN_RT');
+SYS_RATE_FIELD.push('GB_CPYT_DR_BUY_RATE_AUTO');
+SYS_RATE_FIELD.push('E_IA_N_FIX_SPR_RATE');
+SYS_RATE_FIELD.push('E_RATE');
+SYS_RATE_FIELD.push('GB_CFNC_N_LIBOR_RT');
+SYS_RATE_FIELD.push('GB_SPREAD');
+var SYS_DATE_FIELD = new Array();
+SYS_DATE_FIELD.push('BENE_CONS_DT');
+SYS_DATE_FIELD.push('TEMP_DOC_DT');
+SYS_DATE_FIELD.push('TEMP_LTST_SHIP_DT');
+SYS_DATE_FIELD.push('E_IA_D_TRX_VALDATE');
+SYS_DATE_FIELD.push('TEMP_AC_VALUE_DT');
+SYS_DATE_FIELD.push('E_DUE_DATE_ACCEPT');
+SYS_DATE_FIELD.push('GB_CFNC_D_DT');
+SYS_DATE_FIELD.push('TRX_DT');
+SYS_DATE_FIELD.push('LTST_SHIP_DT');
+SYS_DATE_FIELD.push('E_DUE_DATE');
+SYS_DATE_FIELD.push('TEMP_AC_BOOK_DT');
+SYS_DATE_FIELD.push('ISSUE_DT');
+SYS_DATE_FIELD.push('TEMP_RV_MATDATE');
+SYS_DATE_FIELD.push('E_IA_D_DUE_DATE');
+SYS_DATE_FIELD.push('EXPIRY_DT');
+SYS_DATE_FIELD.push('TEMP_EXPIRY_DT');
+SYS_DATE_FIELD.push('E_IA_D_CREATE_DATE');
+SYS_DATE_FIELD.push('NEW_LTST_SHIP_DT');
+SYS_DATE_FIELD.push('E_NEW_EXPIRY_DT');
+SYS_DATE_FIELD.push('CHG_TRX_DATE');
+SYS_DATE_FIELD.push('RISK_DT');
+SYS_DATE_FIELD.push('GB_CFNC_D_DUE_DT');
+SYS_DATE_FIELD.push('E_CFNC_D_DUE_DT');
+SYS_DATE_FIELD.push('DIARY_DT');
+SYS_DATE_FIELD.push('E_TRX_DT');
+SYS_DATE_FIELD.push('NEW_EXPIRY_DT');
+SYS_DATE_FIELD.push('AMD_DT');
+var SYS_FLOAT_FIELD = new Array();
+</script>
+<script language=javascript>
+var DO_NOTSHOW_XPATH="";
+var mainForm='MAINFORM';
+var SYS_AMT_NotRounded = false;function GetTrxRef(addr){
+MAINFORM.elements[addr].value="ILC-000202"
+}
+function window_onload(){
+genSvrDateTime('2019','06','11','02','46','47');
+fv('ADDIT_CONDITION','TOLERANCE OF 10 PERCENT MORE OR LESS IN QUANTITY AND AMOUNT IS ACCEPTABLE.TOLERANCE OF 10 PERCENT MORE OR LESS IN QUANTITY AND AMOUNT IS ACCEPTABLE.');
+fv('ADV_BK_ADD1','11 ME LINH SQUARE DISTRICT 1');
+fv('ADV_BK_ADD2','HO CHI MINH CITY VIETNAM');
+fv('ADV_BK_CORR_MED','SWIFT');
+fv('ADV_BK_ID','ANZBVNVX472');
+fv('ADV_BK_MAIL_ADD','ANZBVNVX472');
+fv('ADV_BK_NM','ANZ BANK (VIETNAM)  LIMITED');
+fv('ADV_BK_REF','EXPORT L/C SEC.');
+fv('ADV_BK_SW_ADD','ANZBVNVX472');
+fv('ADV_BK_SW_TAG','A');
+fv('ADV_THU_BK_CORR_MED','None');
+fv('ADV_THU_BK_REF','NONREF');
+fv('ADV_THU_BK_SW_TAG','D');
+fv('AMD_DT','01-31-2019');
+fv('AMD_PRES_DAYS','0');
+fv('AMD_PRES_TYPE','Days from shipment date');
+fv('AMD_REF','ILC-000202-01');
+fv('AMD_TYPE','New amount');
+fv('APLB_RULE','UCP LATEST VERSION');
+fv('APLB_RULE_40F','URR LATEST VERSION');
+fv('APPLY_FLG','No');
+fv('APPL_ADD1','TEST CUST ADRESS 5');
+fv('APPL_BK_CORR_MED','None');
+fv('APPL_BK_REF','NONREF');
+fv('APPL_CNTY_CD','US');
+fv('APPL_CORR_MED','Email');
+fv('APPL_FAX','888-888-0005');
+fv('APPL_ID','TEST CUST 5');
+fv('APPL_LANG','English');
+fv('APPL_MAIL_ADD','TEST CUST ADRESS 5');
+fv('APPL_NM','TEST CUST NAME 5');
+fv('APPL_TLX','999-999-0005');
+fv('ASSET_ACNO','CONT LIAB - IMIS');
+fv('AVAL_BY','BY NEGOTIATION');
+fv('AVAL_WT_BK_NM','Any Bank');
+fv('AVAL_WT_BK_OPT','Any Bank');
+fv('AVAL_WT_BK_SW_TAG','D');
+fv('BENE_ADD1','TEST 0048 BENEFICIARY ADDRESS');
+fv('BENE_CNTY_CD','VN');
+fv('BENE_CORR_MED','None');
+fv('BENE_NM','TEST 0048 BENEFICIARY NAME');
+fv('BR_CD','740');
+fv('CHARGES','ALL BANKING CHARGES OUTSIDE USA FOR THE ACCOUNT OF THE BENEFICIARY');
+fv('CLERK_ID','RAINIEOP');
+fv('CLS_FLG','No');
+fv('CL_NO','CLF1302');
+fv('CNTY_CODE','US');
+fv('CONF_BK_SW_TAG','D');
+fv('CONF_INSTR','WITHOUT');
+fv('CURRNT_STATUS','IPLC_PayAcceptWithDiscount');
+fv('C_MAIN_REF','ILC-000202');
+fv('DEC_AMT','500');
+fv('DEST_PLACE','HOUSTON USA');
+fv('DEST_PORT','HOUSION PRT USA');
+fv('DETRMNTL_FLG','Yes');
+fv('DOC_REQ','SIGNED COMMERCIAL INVOICESSPECIAL CUSTOMS INVOICE(S) FORM SETSPACKING LIST(S)CERTIFICATE OF ORIGINBENEFICIARYS CERTIFICATE OF INSPECTIONINSURANCE POLICY OR CERTIFICATE FOR 110 PERCENT OF THE XXX VALUE PAYABLE IN THE USA IN US DOLLAR INCLUDING AMERICAN INSTITUTE CARGO CLAUSES S.R. AND C.C. WAR RISKS-ALL RISKSSET CLEAN ON BOARD OCEAN BILLS OF LADING  ISSUED TO ORDER OF SHIPPER BLANK ENDORSED MARKED FREIGHT PREPAID AND NOTIFY');
+fv('DRAFTS_AT','AT SIGHT DRAWN FOR 100 PCT OF INVOICE VALUE ON MIZUHO BANK LTD.');
+fv('DRWE_ADD1','HARBORSIDE FINANCIAL CENTER');
+fv('DRWE_ADD2','1800 PLAZA TEN');
+fv('DRWE_ADD3','JERSEY CITY NJ 07311');
+fv('DRWE_ID','MHCBUS33');
+fv('DRWE_NM','MIZUHO BANKLTD.');
+fv('DRWE_SW_TAG','D');
+fv('EXPIRY_DT','04-01-2019');
+fv('EXPIRY_PLC','Other');
+fv('EXPIRY_PLC_NARR','VIETNAM');
+fv('FORACOF_ADD1','TEST CUST ADRESS 5');
+fv('FORACOF_CNTY_CODE','US');
+fv('FORACOF_CORR_MED','Email');
+fv('FORACOF_FAX','888-888-0005');
+fv('FORACOF_ID','TEST CUST 5');
+fv('FORACOF_LANG','English');
+fv('FORACOF_MAIL_ADD','TEST CUST ADRESS 5');
+fv('FORACOF_NM','TEST CUST NAME 5');
+fv('FORACOF_TLX','999-999-0005');
+fv('FORM_OF_LC','IRREVOCABLE');
+fv('GOODS_DESC','COLD ROLLED STAINLESS STEEL SHEET');
+fv('INC_AMT','0');
+fv('INDIVID_DRAW_FLG','No');
+fv('INSTR_TO_PAY_BK','IN BEIMBURSIMENT');
+fv('ISSUE_BK_ADD1','Szent Istvan-Ter 11');
+fv('ISSUE_BK_ADD2','P.O. Box 585');
+fv('ISSUE_BK_ADD3','H-1821 Budapest V');
+fv('ISSUE_BK_ID','MKKBHUHBXXX');
+fv('ISSUE_BK_NM','MKB BANK ZRT');
+fv('ISSUE_BK_NOTES','<CLOB>');
+fv('ISSUE_BK_REF','ILC-000202');
+fv('ISSUE_BK_SW_ADD','MKKBHUHBXXX');
+fv('ISSUE_BK_SW_TAG','A');
+fv('ISSUE_DT','01-02-2019');
+fv('LC_AMT','10000');
+fv('LC_BAL','1000');
+fv('LC_CCY','USD');
+fv('LIAB_ACNO','CUST LIAB - IMIS');
+fv('LOAD_PLACE','VIETNAM');
+fv('LOAD_PORT','ANY PORT IN VIETNUM');
+fv('NEG_TOL','10');
+fv('NEW_ADV_THU_BK_SW_TAG','D');
+fv('NEW_APLB_RULE_40F','NOTURR');
+fv('NEW_APPL_ADD1','TEST CUST ADRESS 5');
+fv('NEW_APPL_CNTY','US');
+fv('NEW_APPL_ID','TEST CUST 5');
+fv('NEW_APPL_NM','TEST CUST NAME 5');
+fv('NEW_BENE_ADD1','TEST 0048 BENEFICIARY ADDRESS');
+fv('NEW_BENE_NM','TEST 0048 BENEFICIARY NAME');
+fv('NEW_CL_NO','CLF1302');
+fv('NEW_CONF_BK_SW_TAG','D');
+fv('NEW_LC_AMT','9500');
+fv('NEW_LC_AMT_ACPT','0');
+fv('NEW_LC_BAL','10450');
+fv('NEW_NEG_TOL','10');
+fv('NEW_POS_TOL','10');
+fv('NEW_PRES_AVAL_BAL','0');
+fv('NEW_REIM_BK_AUTH_REQ','No');
+fv('NEW_REIM_BK_CORR_MED','None');
+fv('NEW_REIM_BK_SW_TAG','D');
+fv('NEW_TENOR_DAYS','0');
+fv('NOTES','TEST CORPGREEN WORLDWIDE SHIPPING LLCVIETNAM FUMIGATION COMPANY');
+fv('NO_OF_AMD','1');
+fv('PARTIAL_SHIP','NOT ALLOWED');
+fv('POS_TOL','10');
+fv('PRES_AVAL_BAL','1000');
+fv('PRES_DAYS','21');
+fv('PRES_PRD_TXT','21/Days from B/L date');
+fv('PRES_TYPE','Days from B/L date');
+fv('REIM_BK_AUTH_REQ','No');
+fv('REIM_BK_CORR_MED','None');
+fv('REIM_BK_SW_TAG','D');
+fv('RISK_AMT','0');
+fv('SAME_AS_APPL_FLG','Yes');
+fv('SYND_FLG','NO');
+fv('TENOR_DAYS','0');
+fv('TENOR_TYPE','AT SIGHT');
+fv('TNSHIP','NOT ALLOWED');
+fv('TRX_DT','03-07-2019');
+if((typeof (vDOName)!="undefined")){var arrDOName=vDOName.substring(0,vDOName.length-1);
+arrDOName=arrDOName.split(",");
+for(var i=0;i<arrDOName.length;i++){
+ var funcName=arrDOName[i]+"_OnInit";
+if(typeof(window[funcName])=="function"){
+window[funcName]();
+}}
+}
+input_onload();
+genAutoSave(1740000);
+}
+if("null"!="null"){
+alert("null");
+}
+</script>
+
+<link rel="stylesheet" href="../theme/Master.css">
+<Script language="javascript" src="../SYS_JS/SYS_CrossBrowser.js?lastchange=1540501524000"></Script>
+<Script language="javascript" src="../SYS_JS/SYS_Ajax.js?lastchange=1525971936000"></Script>
+<Script language="javascript" src="../SYS_JS/SYS_ActionFunc_CAL.js?lastchange=1551412032000"></Script>
+<Script language="javascript" src="../SYS_JS/securityPd/SYS_MD5.js?lastchange=1489619968000"></Script>
+<Script language="javascript" src="../SYS_JS/SYS_BaseFunc_CAL.js?lastchange=1548668324000"></Script>
+<Script language="javascript" src="../SYS_JS/SYS_BigDecimal.js?lastchange=1490046308000"></Script>
+<Script language="javascript" src="../SYS_JS/SYS_Win.js?lastchange=1489619968000"></Script>
+<Script language="javascript" src="../SYS_JS/SYS_Calendar.js?lastchange=1551663358000"></Script>
+<Script language="javascript" src="../SYS_JS/Ext/ext-base.js?lastchange=1489619972000"></Script>
+<Script language="javascript" src="../SYS_JS/Ext/ext-all.js?lastchange=1530823294000"></Script>
+<link rel="stylesheet" href="../theme/ext-all.css">
+<link rel="stylesheet" href="../theme/Doviewer.css">
+<Script language="javascript" src="../SYS_JS/DO/PagingToolbarForCustom.js?lastchange=1489619972000"></Script>
+<Script language="javascript" src="../SYS_JS/DO/PagingMemoryProxy.js?lastchange=1489619974000"></Script>
+<Script language="javascript" src="../SYS_JS/DO/SessionProvider.js?lastchange=1489619972000"></Script>
+<Script language="javascript" src="../SYS_JS/DO/DoGridForCustom.js?lastchange=1535140586000"></Script>
+<Script language="javascript" src="../SYS_JS/DO/DoPanelForCustom.js?lastchange=1501889226000"></Script>
+<Script language="javascript" src="../SYS_JS/DO/Datafilter.js?lastchange=1489619972000"></Script>
+<Script language="javascript" src="../SYS_JS/DO/DoUnit.js?lastchange=1489619974000"></Script>
+<Script language="javascript" src="../SYS_JS/DO/DoUnitForCustom.js?lastchange=1513118946000"></Script>
+<Script language="javascript" src="../SYS_JS/DO/XMLUtil.js?lastchange=1489619972000"></Script>
+<Script language="javascript" src="../SYS_JS/DO/SYS_DO_Custom.js?lastchange=1526330186000"></Script>
+<Script language="javascript" src="../SYS_JS/DO/Do_CAL.js?lastchange=1489619972000"></Script>
+<Script language="javascript" src="../JS/MHBK/US/SYF_IPLC_IPLC_BeneficiaryResponseToAmd_DO.js?lastchange=1554363190000"></Script>
+<Script language="javascript" src="../JS/MHBK/US/Const_TrxSys.js?lastchange=1554887444000"></Script>
+<Script language="javascript" src="../JS/MHBK/US/Const_IPLC.js?lastchange=1546932028000"></Script>
+<Script language="javascript" src="../JS/MHBK/US/TrxSys.js?lastchange=1557751614000"></Script>
+<Script language="javascript" src="../JS/MHBK/US/SYM_IPLC.js?lastchange=1557752750000"></Script>
+<Script language="javascript" src="../JS/MHBK/US/SYF_IPLC_IPLC_BeneficiaryResponseToAmd.js?lastchange=1557751614000"></Script>
+<script language=javascript>
+var _SYS_Add="Add";
+var _SYS_Edit="Edit";
+var _SYS_Delete="Delete";
+var _SYS_View="View";
+var _SYS_GetData="GetData";
+var _SYS_Reload="Reload";
+var _SYS_UploadFile="UploadFile";
+var _SYS_Finance="Finance";
+var _SYS_RowsPerpageTitle="Rows Perpage";
+var _SYS_DisplayingElements="Displaying elements";
+var _SYS_Nodatatodisplay="No data to display";
+var _SYS_OF="of";
+var _SYS_Page="Page";
+var _SYS_Save="Save";
+var _SYS_SaveAndNext="Save and Next";
+var _SYS_Next="Next";
+var _SYS_UpdateAndNext="Update and Next";
+var _SYS_Close="Close";
+var _SYS_Remove="Remove";
+var _SYS_Filter="Filter";
+</script>  
+</head> 
+<body style="overflow:auto">
+<form method="POST" name="MAINFORM"> 
+  <table width="100%" border="0"> 
+    <tbody>
+      <tr>
+        <td width="42%" class="title_main"><p><b>Beneficiary Response to Amendment</b></p></td>
+        <td width="39%" align="right" ><strong><b>Branch Code</b>
+              <input name="BR_CD" class="CHAR_P" title="Branch Code" size=11 >
+        Reference Number </strong>
+        <input name="C_MAIN_REF" id="C_MAIN_REF"  class="CHAR_P" title="LC Number" size=16 >
+        <span class="title">
+        <input name="NO_OF_AMD"  id="NO_OF_AMD" title="No. of Amendments of This Trx"  class="CHAR_P" size=3>
+        </span></td>
+        <td width="19%" >
+<Script language="javascript" src="../JS/MHBK/US/SSSS_SRC_MsgViewAll.js?lastchange=1551171418000"></Script>
+
+<!--a href="javascript:MsgViewAll();" style="color:black; font:bold;">View Inward SWIFT</a><input type="hidden" name="STP_INQALL_RESULT"-->
+<a href="javascript:MsgViewAll();" style="color:blue;">View Inward SWIFT</a><input type="hidden" name="STP_INQALL_RESULT">
+          <!--a href="#" onClick="JavaScript:SYS_Upload_Image()" name="Upload_Imaging" >Upload</a>&nbsp;&nbsp; <a href="#" onClick="JavaScript:SYS_Edit_Image()" name="Edit_Imaging" >Edit</a>&nbsp;&nbsp; <a href="#" onClick="JavaScript:SYS_View_Image()" name="View_Imaging" >View</a!-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table border="0" cellspacing="0" cellpadding="0" id='tblNav'>
+    <tr>
+      <td class="title_top" style="color:#9933FF" id=A >Main</td>
+      <td>&nbsp;|&nbsp;</td>
+      <td class="title_top" id=B >Parties I </td>
+      <td>&nbsp;|&nbsp;</td>
+      <td class="title_top" id=C >Parties II</td>
+      <td>&nbsp;|&nbsp;</td>
+      <td class="title_top" id=O >Tenor</td>	  
+      <td>&nbsp;|&nbsp;</td>
+      <td class="title_top" id=D >Shipment</td>
+      <td>&nbsp;|&nbsp;</td>
+      <td class="title_top" id=H >Goods</td>
+      <td>&nbsp;|&nbsp;</td>
+      <td class="title_top" id=I >Documents</td>	  
+      <td>&nbsp;|&nbsp;</td>
+      <td class="title_top" id=G >Additional Condition</td>	  
+      <td>&nbsp;|&nbsp;</td>
+      <td class="title_top" id=E >Advice</td>
+      <td>&nbsp;|&nbsp;</td>
+      <td class="title_top" id=F >Notes</td>
+      <td>&nbsp;|&nbsp;</td>
+      <td class="title_top" id=M >Diary</td>
+      <!--td>&nbsp;|&nbsp;</td>
+      <td class="title_top" id=N >MT798</td-->
+    </tr>
+  </table>
+  <input type="hidden" name="CURRNT_STATUS" id="CURRNT_STATUS" >
+  <input type="hidden" name="NXT_STATUS" id="NXT_STATUS">
+  <input type="hidden" name="LOGIN_TIME" id="LOGIN_TIME">
+  <input type="hidden" name="LCY" id="LCY">
+  <!-- field in the Applicable for 'Other'-->
+  <input type="hidden" name="FUNCTION_ACTION" id="FUNCTION_ACTION" >
+  <input type="hidden" name="CLS_FLG" id="CLS_FLG">
+  <!--Data Object related hidden fields-->
+  <input type="hidden" name ="AdivceForBankCust" id="D00000000019" eetype="DO">
+  <input type="hidden" id="TEMP_N90_REF_20" name="TEMP_N90_REF_20">
+  <input type="hidden" id="TEMP_N90_REF_21" name="TEMP_N90_REF_21">
+  <!-- Hidden fields for Amend lc-->
+  <input type="hidden" name="TEMP_LC_AMT" id="TEMP_LC_AMT" title="TEMP_LC_AMT" class="AMT_P" size="18" maxlength="18" >
+  <input type="hidden" name="TEMP_LC_BAL" id="TEMP_LC_BAL" title="TEMP_LC_BAL" class="AMT_P" size="18" maxlength="18" >
+  <input type="hidden" name="TEMP_LOAD_PLACE" id="TEMP_LOAD_PLACE" title="TEMP_LOAD_PLACE" class="CHAR_P" size="65" maxlength="65">
+  <input type="hidden" name="TEMP_LOAD_PORT" id="TEMP_LOAD_PORT" title="TEMP_LOAD_PORT" class="CHAR_P" size="65" maxlength="65">
+  <input type="hidden" name="TEMP_LTST_SHIP_DT" id="TEMP_LTST_SHIP_DT" title="TEMP_LTST_SHIP_DT" class="DATE_P" size="10" maxlength="10">
+  <input type="hidden" name="TEMP_INCOTERMS" id="TEMP_INCOTERMS" title="TEMP_INCOTERMS" class="CHAR_P" size="3" maxlength="3">
+  <input type="hidden" name="TEMP_GOODS_DESC" id="TEMP_GOODS_DESC" title="TEMP_GOODS_DESC" class="CHAR_P" size="6500" maxlength="6500">
+  <input type="hidden" name="TEMP_EXPIRY_PLC_NEW" id="TEMP_EXPIRY_PLC_NEW" title="TEMP_EXPIRY_PLC_NEW" class="CHAR_P" size="29" maxlength="29">
+  <input type="hidden" name="TEMP_EXPIRY_PLC_NARR" id="TEMP_EXPIRY_PLC_NARR" title="TEMP_EXPIRY_PLC_NARR" class="CHAR_P" size="29" maxlength="29">
+  <input type="hidden" name="TEMP_DEST_PLACE" id="TEMP_DEST_PLACE" title="TEMP_DEST_PLACE" class="CHAR_P" size="65" maxlength="65">
+  <input type="hidden" name="TEMP_DEST_PORT" id="TEMP_DEST_PORT" title="TEMP_DEST_PORT" class="CHAR_P" size="65" maxlength="65">
+  <input type="hidden" name="TEMP_TNSHIP_NARR" id="TEMP_TNSHIP_NARR" title="TEMP_TNSHIP_NARR" class="CHAR_P" size="35" maxlength="35">
+  <input type="hidden" name="TEMP_TNSHIP" id="TEMP_TNSHIP" title="Transhipment for SWIFT Mapping" class="CHAR_P" size="35" maxlength="35">
+  <input type="hidden" name="TEMP_SHIP_PRD" id="TEMP_SHIP_PRD" title="TEMP_SHIP_PRD" class="CHAR_P" size="210" maxlength="210">
+  <input type="hidden" name="TEMP_POS_TOL" id="TEMP_POS_TOL" title="TEMP_POS_TOL" class="INT_P" size="0" maxlength="0">
+  <input type="hidden" name="TEMP_PARTIAL_SHIP" id="TEMP_PARTIAL_SHIP" title="Partial shipment for SWIFT Mapping" class="CHAR_P" size="35" maxlength="35">
+  <input type="hidden" name="TEMP_PART_SHIP_NA" id="TEMP_PART_SHIP_NA" title="TEMP_PART_SHIP_NA" class="CHAR_P" size="35" maxlength="35">
+  <input type="hidden" name="TEMP_NEG_TOL" id="TEMP_NEG_TOL" title="TEMP_NEG_TOL" class="INT_P" size="0" maxlength="0">
+  <input type="hidden" name="TEMP_ADDIT_CONDITION" id="TEMP_ADDIT_CONDITION" title="TEMP_ADDIT_CONDITION" class="CHAR_P" size="6500" maxlength="6500">
+  <input type="hidden" name="TEMP_ADDIT_COV_AMT" id="TEMP_ADDIT_COV_AMT" title="TEMP_ADDIT_COV_AMT" class="CHAR_P" size="140" maxlength="140">
+  <input type="hidden" name="TEMP_APLB_RULE_NARR_TRANSFOR" id="TEMP_APLB_RULE_NARR_TRANSFOR">  
+  <input type="hidden" name="TEMP_BENE_TLX" id="TEMP_BENE_TLX" title="TEMP_BENE_TLX" class="CHAR_P" size="20" maxlength="20">
+  <input type="hidden" name="TEMP_BENE_REF" id="TEMP_BENE_REF" title="TEMP_BENE_REF" class="CHAR_P" size="16" maxlength="16">
+  <input type="hidden" name="TEMP_BENE_NOTES" id="TEMP_BENE_NOTES" title="TEMP_BENE_NOTES" class="CHAR_P" size="210" maxlength="210">
+  <input type="hidden" name="TEMP_BENE_NM" id="TEMP_BENE_NM" title="TEMP_BENE_NM" class="CHAR_P" size="35" maxlength="35">
+  <input type="hidden" name="TEMP_BENE_MAIL_ADD" id="TEMP_BENE_MAIL_ADD" title="TEMP_BENE_MAIL_ADD" class="CHAR_P" size="210" maxlength="210">
+  <input type="hidden" name="TEMP_BENE_LANG" id="TEMP_BENE_LANG" title="TEMP_BENE_LANG" class="CHAR_P">
+  <input type="hidden" name="TEMP_BENE_ID" id="TEMP_BENE_ID" title="TEMP_BENE_ID" class="CHAR_P" size="12" maxlength="12">
+  <input type="hidden" name="TEMP_BENE_FAX" id="TEMP_BENE_FAX" title="TEMP_BENE_FAX" class="CHAR_P" size="20" maxlength="20">
+  <input type="hidden" name="TEMP_BENE_EMAIL" id="TEMP_BENE_EMAIL" title="TEMP_BENE_EMAIL" class="CHAR_P" size="40" maxlength="40">
+  <input type="hidden" name="TEMP_BENE_CORR_MED" id="TEMP_BENE_CORR_MED" title="TEMP_BENE_CORR_MED" class="CHAR_P">
+  <input type="hidden" name="TEMP_BENE_ADD3" id="TEMP_BENE_ADD3" title="TEMP_BENE_ADD3" class="CHAR_P" size="35" maxlength="35">
+  <input type="hidden" name="TEMP_BENE_ADD2" id="TEMP_BENE_ADD2" title="TEMP_BENE_ADD2" class="CHAR_P" size="35" maxlength="35">
+  <input type="hidden" name="TEMP_BENE_ADD1" id="TEMP_BENE_ADD1" title="TEMP_BENE_ADD1" class="CHAR_P" size="35" maxlength="35">
+  <input type="hidden" name="TEMP_BENE_ACNO" id="TEMP_BENE_ACNO" title="TEMP_BENE_ACNO" class="CHAR_P" size="35" maxlength="35">
+  <input type="hidden" name="TEMP_BENE_AC_OFCD" id="TEMP_BENE_AC_OFCD" title="TEMP_BENE_AC_OFCD" class="CHAR_P" size="11" maxlength="11">
+  <input type="hidden" name="TEMP_AMT_SPEC" id="TEMP_AMT_SPEC" title="TEMP_AMT_SPEC" class="CHAR_P">
+  <input  name="TEMP_EXPIRY_DT" id="TEMP_EXPIRY_DT" type="hidden" class="DATE_O" size="10" maxlength="10">
+  <!--Begin hidde Risk tab fields-->
+  <input type="hidden" id="TEMP_RV_DEBITACC" name="TEMP_RV_DEBITACC">
+  <input type="hidden" id="TEMP_RV_MATDATE" name="TEMP_RV_MATDATE">
+  <input type="hidden" id="RISK_AMT" name="RISK_AMT">
+  <input type="hidden" id="RISK_DT" name="RISK_DT" class="DATE_P">
+  <input type="hidden" id="LIAB_ACNO" name="LIAB_ACNO">
+  <input type="hidden" id="FACI_STATUS" name="FACI_STATUS">
+  <input type="hidden" id="CHK_FACILITY" name="CHK_FACILITY">
+  <input type="hidden" id="OVERRIDE_RESN" name="OVERRIDE_RESN">
+  <input type="hidden" id="GRACE_DAYS" name="GRACE_DAYS">
+  <input type="hidden" id="RV_FOR_ACCT_OF_NOTES" name="RV_FOR_ACCT_OF_NOTES">
+  <input type="hidden" id="RV_FOR_ACCT_OF_ID" name="RV_FOR_ACCT_OF_ID">
+  <input type="hidden" id="RV_FOR_ACCT_CUST_BK" name="RV_FOR_ACCT_CUST_BK">
+  <input type="hidden" id="RV_FOR_ACCT_OF_NM" name="RV_FOR_ACCT_OF_NM">
+  <input type="hidden" id="RV_COMMITCAT" name="RV_COMMITCAT">
+  <input type="hidden" id="RV_COMMITTAKENON" name="RV_COMMITTAKENON">
+  <input type="hidden" id="RV_PRODUCTCODE" name="RV_PRODUCTCODE">
+  <input type="hidden" id="RV_TRXTYPE" name="RV_TRXTYPE">
+  <input type="hidden" id="RV_FOR_ACCT_OF_MAIL_ADD" name="RV_FOR_ACCT_OF_MAIL_ADD">
+  <input type="hidden" id="TEMP_NEW_LC_AMT" name="TEMP_NEW_LC_AMT">
+  <input type="hidden" name="TEMP_ASSET_ACNO" id="TEMP_ASSET_ACNO">
+  <input type="hidden" name="TEMP_LIAB_ACNO" id="TEMP_LIAB_ACNO">
+  <input type="hidden" name="ASSET_ACNO" id="ASSET_ACNO">
+  <input type="hidden" name="TEMP_DOC_REQ_TRANSFER" id="TEMP_DOC_REQ_TRANSFER">
+  <input type="hidden" name="NEW_FORM_OF_LC" id="NEW_FORM_OF_LC">
+  <input type="hidden" name="TEMP_FORM_OF_LC" id="TEMP_FORM_OF_LC">
+  <input type="hidden" name="TEMP_DRAFTS_AT" id="TEMP_DRAFTS_AT" class="CHAR_O">  
+  <input type="hidden" name="NEW_APLB_RULE" id="NEW_APLB_RULE">
+  <input type="hidden" name="TEMP_APLB_RULE_TRANSFOR" id="TEMP_APLB_RULE_TRANSFOR"> 
+  <input type="hidden" name="NEW_APLB_RULE_NARR" id="NEW_APLB_RULE_NARR">
+  <input type="hidden" name="TEMP_AVAL_WT_BK_ADD1" id="TEMP_AVAL_WT_BK_ADD1" class="CHAR_O">
+  <input type="hidden" name="TEMP_AVAL_WT_BK_ADD2" id="TEMP_AVAL_WT_BK_ADD2" class="CHAR_O">
+  <input type="hidden" name="TEMP_AVAL_WT_BK_ADD3" id="TEMP_AVAL_WT_BK_ADD3" class="CHAR_O">
+  <input type="hidden" name="TEMP_AVAL_WT_BK_ID" id="TEMP_AVAL_WT_BK_ID" class="CHAR_O">
+  <input type="hidden" name="TEMP_AVAL_WT_BK_NM" id="TEMP_AVAL_WT_BK_NM" class="CHAR_O">
+  <input type="hidden" name="TEMP_AVAL_WT_BK_OPT" id="TEMP_AVAL_WT_BK_OPT" class="CHAR_O">
+  <input type="hidden" name="TEMP_AVAL_WT_BK_SW_ADD" id="TEMP_AVAL_WT_BK_SW_ADD" class="CHAR_O">
+  <input type="hidden" name="TEMP_AVAL_WT_BK_SW_TAG" id="TEMP_AVAL_WT_BK_SW_TAG" class="CHAR_O">  
+  <input type="hidden" name="TEMP_DRWE_ADD1" id="TEMP_DRWE_ADD1" class="CHAR_O">
+  <input type="hidden" name="TEMP_DRWE_ADD2" id="TEMP_DRWE_ADD2" class="CHAR_O">
+  <input type="hidden" name="TEMP_DRWE_ADD3" id="TEMP_DRWE_ADD3" class="CHAR_O">
+  <input type="hidden" name="TEMP_DRWE_ID" id="TEMP_DRWE_ID" class="CHAR_O">
+  <input type="hidden" name="TEMP_DRWE_NM" id="TEMP_DRWE_NM" class="CHAR_O">
+  <input type="hidden" name="TEMP_DRWE_SW_ADD" id="TEMP_DRWE_SW_ADD" class="CHAR_O">
+  <input type="hidden" name="TEMP_DRWE_SW_TAG" id="TEMP_DRWE_SW_TAG" class="CHAR_O">  
+  <input type="hidden" name="TEMP_MIX_PMT_DETL" id="TEMP_MIX_PMT_DETL" class="CHAR_O">
+  <input type="hidden" name="TEMP_DEF_PMT_DET" id="TEMP_DEF_PMT_DET" class="CHAR_O">
+  <input type="hidden" name="TEMP_DESC_OF_GOODS" id="TEMP_DESC_OF_GOODS" class="CHAR_O">
+  <input type="hidden" name="TEMP_PAY_COND_TO_BENE" id="TEMP_PAY_COND_TO_BENE" class="CHAR_O">
+  <input type="hidden" name="TEMP_PAY_COND_TO_REV_BK" id="TEMP_PAY_COND_TO_REV_BK" class="CHAR_O">
+  <input type="hidden" name="TEMP_CHARGES" id="TEMP_CHARGES" class="CHAR_O">
+  <input type="hidden" name="TEMP_PRES_DAYS" id="TEMP_PRES_DAYS" class="INT_O">
+  <input type="hidden" name="TEMP_PRES_TYPE" id="TEMP_PRES_TYPE" class="CHAR_O">
+  <input type="hidden" name="TEMP_PRES_PRD_TXT" id="TEMP_PRES_PRD_TXT" class="CHAR_O">
+  <input type="hidden" name="TEMP_CONF_INSTR" id="TEMP_CONF_INSTR" class="CHAR_O">
+  <input type="hidden" name="TEMP_CONF_BK_ADD1" id="TEMP_CONF_BK_ADD1" class="CHAR_O">
+  <input type="hidden" name="TEMP_CONF_BK_ADD2" id="TEMP_CONF_BK_ADD2" class="CHAR_O">
+  <input type="hidden" name="TEMP_CONF_BK_ADD3" id="TEMP_CONF_BK_ADD3" class="CHAR_O">
+  <input type="hidden" name="TEMP_CONF_BK_ID" id="TEMP_CONF_BK_ID" class="CHAR_O">
+  <input type="hidden" name="TEMP_CONF_BK_NM" id="TEMP_CONF_BK_NM" class="CHAR_O">
+  <input type="hidden" name="TEMP_CONF_BK_SW_ADD" id="TEMP_CONF_BK_SW_ADD" class="CHAR_O">
+  <input type="hidden" name="TEMP_CONF_BK_SW_TAG" id="TEMP_CONF_BK_SW_TAG" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_AC_NO" id="TEMP_REIM_BK_AC_NO" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_ADD1" id="TEMP_REIM_BK_ADD1" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_ADD2" id="TEMP_REIM_BK_ADD2" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_ADD3" id="TEMP_REIM_BK_ADD3" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_CHG_DESC" id="TEMP_REIM_BK_CHG_DESC" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_CORR_MED" id="TEMP_REIM_BK_CORR_MED" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_ID" id="TEMP_REIM_BK_ID" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_MAIL_ADD" id="TEMP_REIM_BK_MAIL_ADD" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_NM" id="TEMP_REIM_BK_NM" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_OTH_CHG_NARR" id="TEMP_REIM_BK_OTH_CHG_NARR" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_REF" id="TEMP_REIM_BK_REF" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_SW_ADD" id="TEMP_REIM_BK_SW_ADD" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_BK_SW_TAG" id="TEMP_REIM_BK_SW_TAG" class="CHAR_O">
+  <input type="hidden" name="TEMP_REIM_NARR_TAG_77" id="TEMP_REIM_NARR_TAG_77" class="CHAR_O">
+  <input type="hidden" name="TEMP_APLB_RULE_40F" id="TEMP_APLB_RULE_40F" class="CHAR_O">
+  <input type="hidden" name="TEMP_BK_TO_BK_INFO" id="TEMP_BK_TO_BK_INFO" class="CHAR_O">
+  <input type="hidden" name="TEMP_INSTR_TO_PAY_BK" id="TEMP_INSTR_TO_PAY_BK" class="CHAR_O">
+  <input type="hidden" name="TEMP_ADV_THU_BK_ADD1" id="TEMP_ADV_THU_BK_ADD1" class="CHAR_O">
+  <input type="hidden" name="TEMP_ADV_THU_BK_ADD2" id="TEMP_ADV_THU_BK_ADD2" class="CHAR_O">
+  <input type="hidden" name="TEMP_ADV_THU_BK_ADD3" id="TEMP_ADV_THU_BK_ADD3" class="CHAR_O">
+  <input type="hidden" name="TEMP_ADV_THU_BK_ID" id="TEMP_ADV_THU_BK_ID" class="CHAR_O">
+  <input type="hidden" name="TEMP_ADV_THU_BK_NM" id="TEMP_ADV_THU_BK_NM" class="CHAR_O">
+  <input type="hidden" name="TEMP_ADV_THU_BK_SW_ADD" id="TEMP_ADV_THU_BK_SW_ADD" class="CHAR_O">
+  <input type="hidden" name="TEMP_ADV_THU_BK_SW_TAG" id="TEMP_ADV_THU_BK_SW_TAG" class="CHAR_O">
+  <input type="hidden" name="TEMP_SEND_TO_RCV_INFO_MT707" id="TEMP_SEND_TO_RCV_INFO_MT707" class="CHAR_O">  
+  <input type="hidden" id="ACC_NOT" name="ACC_NOT">
+  <input type="hidden" name="TEMP_APPL_ID" id="TEMP_APPL_ID">
+  <input type="hidden" name="TEMP_APPL_NM" id="TEMP_APPL_NM">
+  <input type="hidden" name="TEMP_APPL_ADD1" id="TEMP_APPL_ADD1">
+  <input type="hidden" name="TEMP_APPL_ADD2" id="TEMP_APPL_ADD2">
+  <input type="hidden" name="TEMP_APPL_ADD3" id="TEMP_APPL_ADD3">
+  <input type="hidden" name="TEMP_CL_NO" id="TEMP_CL_NO">
+  <input type="hidden" id="TEMP_APPL_CNTY_CD" name="TEMP_APPL_CNTY_CD" title="Applicant Country Code" class="CHAR_P" size="3" maxlength="2">  
+  <input type="hidden" id="TEMP_BENE_CNTY_CD" name="TEMP_BENE_CNTY_CD" title="Beneficiary Country Code" class="CHAR_P" size="3" maxlength="2">  
+  <input type="hidden" name="TEMP_TENOR_DAYS" id="TEMP_TENOR_DAYS">
+  <input type="hidden" name="TEMP_TENOR_TYPE" id="TEMP_TENOR_TYPE">   
+  <input type="hidden" name="PRES_AVAL_BAL" id="PRES_AVAL_BAL" title=" LC Present Balance" class="AMT_P" size="18" maxlength="18" >   
+  <input type="hidden" name="TEMP_PRES_AVAL_BAL" id="TEMP_PRES_AVAL_BAL" title=" LC Present Balance" class="AMT_P" size="18" maxlength="18" >     
+<input type="hidden" name="NEW_PRES_AVAL_BAL" id="NEW_PRES_AVAL_BAL" title=" LC Present Balance" class="AMT_P" size="18" maxlength="18" >   
+     
+  <!--End hidde Risk tab fields-->
+  <!--End -->
+  <table  width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td class="td_gray" align="right" valign="top"><img src="../Images/roundedge_top.gif" width="120" height="22"></td>
+    </tr>
+  </table>
+  <div id="A_div">
+    <table  width="100%"  cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="4" class="title"><b>General Information </b> </td>
+      </tr>
+      <tr>
+        <td class="td_gray" >Transaction Date </td>
+        <td class="td_gray" ><input type="text" name="TRX_DT" id="TRX_DT" class="DATE_M" title="Transaction Date" size="10" maxlength="10" onClick="SYT_doCalendar(this)"></td>
+        <td class="td_gray" id="StartDesc" >Type of Amendment</td>
+        <td class="td_gray"><select name="AMD_TYPE" title="AMD_TYPE" class="CHAR_P">
+            <option value="New expiration date">New expiration date</option>
+            <option value="New date and new amount" selected>New date+amount</option>
+            <option value="New amount">New amount</option>
+            <option value="Others">Others</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td class="td_gray" width="20%">Form of LC[40A]</td>
+        <td class="td_gray" width="30%"><select name="FORM_OF_LC" id="FORM_OF_LC" title="Form of LC" class="CHAR_M">
+          <option value="" selected> </option>
+          <option value="IRREVOCABLE">IRREVOCABLE</option>
+          <option value="REVOCABLE">REVOCABLE</option>
+          <option value="IRREVOCABLE TRANSFERABLE">IRREVOCABLE TRANSFERABLE</option>
+          <option value="REVOCABLE TRANSFERABLE">REVOCABLE TRANSFERABLE</option>
+          <option value="IRREVOCABLE STANDBY">IRREVOCABLE STANDBY</option>
+          <option value="REVOCABLE STANDBY">REVOCABLE STANDBY</option>
+          <option value="IRREVOC TRANS STANDBY">IRREVOC TRANS STANDBY</option>
+        </select></td>
+        <td class="td_gray">Issue Date</td>
+        <td class="td_gray"><input type="text" name="ISSUE_DT" id="ISSUE_DT" title="Issue Date (Tag31C)" class="DATE_P" size="10" maxlength="10" onClick="SYT_doCalendar(this);"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Place of Expiry [31D]</td>
+        <td class="td_gray"><select name="EXPIRY_PLC" id="EXPIRY_PLC" title="Expiry Place" class="CHAR_P">
+            <option value="Beneficiary Country" selected>Beneficiary Country</option>
+            <option value="At Our Counters">At Our Counters</option>
+            <option value="Advising Bank Country">Advising Bank Country</option>
+            <option value="Other">Other</option>
+          </select>
+          <input name="EXPIRY_PLC_NARR" id="EXPIRY_PLC_NARR" class="CHAR_P"  title="Expiry Place Narrative"  size=29 maxlength=29 ></td>
+        <td class="td_gray">Date of Expiry[31D]</td>
+        <td class="td_gray"><input name="EXPIRY_DT" id="EXPIRY_DT" type="text" class="DATE_P" title="Expiry Date" size="10" maxlength="10" onClick="SYT_doCalendar(this)">
+          </a><input name="APPLY_FLG" type="hidden" value="No"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Applicable Rules[40E]</td>
+        <td class="td_gray"><select name="APLB_RULE" id="APLB_RULE" title="Applicable Rule" class="CHAR_P">
+            <option value="UCP LATEST VERSION" selected>UCP Latest Version</option>
+            <option value="EUCP LATEST VERSION">EUCP Latest Version</option>
+            <option value="UCPURR LATEST VERSION">UCPURR Latest Version</option>
+            <option value="EUCPURR LATEST VERSION">EUCPURR Latest Version</option>
+            <option value="ISP LATEST VERSION">ISP Latest Version</option>
+            <option value="OTHR">Other</option>
+          </select>
+          <input name="APLB_RULE_NARR" id="APLB_RULE_NARR" class="CHAR_P"  title="Applicable Rule Narrative"  size=36 maxlength=36 ></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr> 
+      <tr>
+        <td height="16" colspan="4" class="title"><b>Financial Information </b> </td>
+      </tr>
+      <tr>
+        <td width="20%" class="td_gray">LC CCY and Amt[32B]</td>
+        <td width="30%" class="td_gray"><select name="LC_CCY" id="LC_CCY" class="CHAR_P" title="LC Currency">
+            <option value='AED'>AED</option><option value='AFA'>AFA</option><option value='ALL'>ALL</option><option value='AMD'>AMD</option><option value='ANG'>ANG</option><option value='AOA'>AOA</option><option value='ARS'>ARS</option><option value='ATS'>ATS</option><option value='AUD'>AUD</option><option value='AWG'>AWG</option><option value='AZM'>AZM</option><option value='BAM'>BAM</option><option value='BBD'>BBD</option><option value='BEF'>BEF</option><option value='BGN'>BGN</option><option value='BIF'>BIF</option><option value='BMD'>BMD</option><option value='BOB'>BOB</option><option value='BRL'>BRL</option><option value='BSD'>BSD</option><option value='BTN'>BTN</option><option value='BWP'>BWP</option><option value='BZD'>BZD</option><option value='CAD'>CAD</option><option value='CDF'>CDF</option><option value='CHF'>CHF</option><option value='CLF'>CLF</option><option value='CNY'>CNY</option><option value='COP'>COP</option><option value='CRC'>CRC</option><option value='CUP'>CUP</option><option value='CVE'>CVE</option><option value='CYP'>CYP</option><option value='CZK'>CZK</option><option value='DEM'>DEM</option><option value='DKK'>DKK</option><option value='DOP'>DOP</option><option value='DZD'>DZD</option><option value='ECS'>ECS</option><option value='EEK'>EEK</option><option value='EGP'>EGP</option><option value='ERN'>ERN</option><option value='ESP'>ESP</option><option value='ETB'>ETB</option><option value='EUR'>EUR</option><option value='FIM'>FIM</option><option value='FJD'>FJD</option><option value='FRF'>FRF</option><option value='GBP'>GBP</option><option value='GEL'>GEL</option><option value='GHC'>GHC</option><option value='GIP'>GIP</option><option value='GMD'>GMD</option><option value='GNF'>GNF</option><option value='GRD'>GRD</option><option value='GTQ'>GTQ</option><option value='GYD'>GYD</option><option value='HKD'>HKD</option><option value='HRK'>HRK</option><option value='HTG'>HTG</option><option value='HUF'>HUF</option><option value='IDR'>IDR</option><option value='IEP'>IEP</option><option value='ILS'>ILS</option><option value='INR'>INR</option><option value='IQD'>IQD</option><option value='IRR'>IRR</option><option value='ISK'>ISK</option><option value='ITL'>ITL</option><option value='JMD'>JMD</option><option value='JOD'>JOD</option><option value='JPY'>JPY</option><option value='KES'>KES</option><option value='KHR'>KHR</option><option value='KPW'>KPW</option><option value='KRW'>KRW</option><option value='KWD'>KWD</option><option value='KZT'>KZT</option><option value='LAK'>LAK</option><option value='LBP'>LBP</option><option value='LKR'>LKR</option><option value='LRD'>LRD</option><option value='LSL'>LSL</option><option value='LTL'>LTL</option><option value='LUF'>LUF</option><option value='LVL'>LVL</option><option value='LYD'>LYD</option><option value='MAD'>MAD</option><option value='MDL'>MDL</option><option value='MGF'>MGF</option><option value='MKD'>MKD</option><option value='MMK'>MMK</option><option value='MNT'>MNT</option><option value='MOP'>MOP</option><option value='MRO'>MRO</option><option value='MTL'>MTL</option><option value='MUR'>MUR</option><option value='MVR'>MVR</option><option value='MXP'>MXP</option><option value='MYR'>MYR</option><option value='MZM'>MZM</option><option value='NAD'>NAD</option><option value='NGN'>NGN</option><option value='NIO'>NIO</option><option value='NLG'>NLG</option><option value='NOK'>NOK</option><option value='NPR'>NPR</option><option value='NZD'>NZD</option><option value='OMR'>OMR</option><option value='PAB'>PAB</option><option value='PEN'>PEN</option><option value='PHP'>PHP</option><option value='PKR'>PKR</option><option value='PLN'>PLN</option><option value='PYG'>PYG</option><option value='QAR'>QAR</option><option value='ROL'>ROL</option><option value='RON'>RON</option><option value='RUB'>RUB</option><option value='RWF'>RWF</option><option value='SAR'>SAR</option><option value='SDD'>SDD</option><option value='SEK'>SEK</option><option value='SGD'>SGD</option><option value='SIT'>SIT</option><option value='SKK'>SKK</option><option value='SLL'>SLL</option><option value='SOS'>SOS</option><option value='SVC'>SVC</option><option value='SYP'>SYP</option><option value='SZL'>SZL</option><option value='THB'>THB</option><option value='TJS'>TJS</option><option value='TMM'>TMM</option><option value='TND'>TND</option><option value='TOP'>TOP</option><option value='TRL'>TRL</option><option value='TWD'>TWD</option><option value='TZS'>TZS</option><option value='UAH'>UAH</option><option value='UGX'>UGX</option><option value='USD' selected >USD</option><option value='UYU'>UYU</option><option value='UZS'>UZS</option><option value='VEB'>VEB</option><option value='VND'>VND</option><option value='VUV'>VUV</option><option value='XAF'>XAF</option><option value='XCD'>XCD</option><option value='YER'>YER</option><option value='YUM'>YUM</option><option value='ZAR'>ZAR</option><option value='ZMK'>ZMK</option><option value='ZWD'>ZWD</option><script language="javascript"></script>
+          </select>
+          <input type="text" size="15" maxlength="15"  title="LC Amount" name="LC_AMT" id="LC_AMT" class="AMT_P"></td>
+        <td width="20%" class="td_gray">Percentage Tolerance <em>(MT:39A) </em></td>
+        <td width="30%" class="td_gray"><select name="AMT_SPEC" id="AMT_SPEC" title="Amount Specification" class="CHAR_P">
+            <option value="" selected> </option>
+            <option value="NOT EXCEEDING" >NOT EXCEEDING</option>
+            <option value="ABOUT">ABOUT</option>
+          </select>
+          or
+          <input name="POS_TOL" id="POS_TOL" type="text" class="INT_P" title="Positive Tolerance" size="2" maxlength=2>
+          /
+          <input name="NEG_TOL" id="NEG_TOL" type="text"class="INT_P" title="Negative Tolerance"  size="2" maxlength=2>        </td>
+      </tr>
+      <tr> 
+        <td class="td_gray">LC Balance (Risk Amt)</td>
+        <td class="td_gray"><input type="hidden" name="LC_BAL_TEMP" id="LC_BAL_TEMP" class="AMT_O">
+          <input type="text" size="15" maxlength="15" name="LC_BAL" id="LC_BAL" title="LC Balance" class="AMT_P" ></td>
+        <td class="td_gray">Additional Amounts Covered[39C]</td>
+        <td class="td_gray"><textarea name="ADD_AMT_COVRD" id="ADD_AMT_COVRD" title="Additional Amounts Covered" cols="35" rows="4" class="CHAR_P" ></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="4" class="title"><b>Beneficiary Repsonse</b></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Detrimental Flag</td>
+        <td class="td_gray"><span class="title">
+          <select name="DETRMNTL_FLG" title="Detrimental Flag" id="DETRMNTL_FLG" class="CHAR_P">
+            <option value="" > </option>
+            <option value="Yes" >Yes</option>
+            <option value="No">No</option>
+          </select>
+          </span></td>
+        <td class="td_gray"colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">Beneficiary Decision</td>
+        <td class="td_gray"><p class="title">
+          <select name="BENE_CONS_FLG" id="BENE_CONS_FLG" title="Beneficiary Decision" class="CHAR_M">
+            <option value="" > </option>
+            <option value="Accepted">Accepted</option>
+            <option value="Rejected">Rejected</option>
+          </select>
+          <input name="ACCEPT_REJECT" type="hidden" >
+        </p>        </td>
+        <td class="td_gray"colspan="2"><input name="SYND_ADD" type="hidden" >
+        <input name="SYND_FLG" type="hidden" ></td>
+      </tr>
+      <tr>
+        <td class="td_gray"><!--Beneficiary Decision Date-->Amendment Effective Date</td>
+        <td class="td_gray"><input type="text" name="BENE_CONS_DT" id="BENE_CONS_DT" title="Beneficiary Decision Date" class="DATE_M" size=	"10" maxlength="10" onClick="SYT_doCalendar(this)">        </td>
+        <td class="td_gray"colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="4" class="title"><b>Amendment Information</b></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Date of Amendment</td>
+        <td class="td_gray"><span class="title">
+          <input name="AMD_DT"  id="AMD_DT" title="Date Amended" class="DATE_P" size="10">
+        </span></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td class="td_gray">New LC Amount</td>
+        <td class="td_gray"><input name="NEW_LC_AMT" id="NEW_LC_AMT" class="AMT_P" title="New LC Amount"  size = "15" maxlength="15">
+          <span class="title">
+          <input type="hidden" name="AMD_REF" id="AMD_REF" title="Amendment Reference" class="CHAR_P" size="16" maxlength="16">
+        </span></td>
+        <td class="td_gray">New Date of Expiry [31E]</td>
+        <td class="td_gray"><input name="NEW_EXPIRY_DT" id="NEW_EXPIRY_DT" type="text" class="DATE_P" title="New Expiry Date" size="10" maxlength="10" onClick="SYT_doCalendar(this)">        </td>
+      </tr>
+      <tr>
+        <td class="td_gray">New LC Balance</td>
+        <td class="td_gray"><input name="NEW_LC_BAL" id="NEW_LC_BAL" class="AMT_P" title="New LC Balance"  size="15" maxlength="15"></td>
+        <td class="td_gray">New Expiry Place</td>
+        <td class="td_gray"><select name="NEW_EXPIRY_PLC" id="NEW_EXPIRY_PLC" title="New Expiry Place" class="CHAR_P">
+            <option value="Beneficiary Country" selected>Beneficiary Country</option>
+            <option value="At Our Counters">At Our Counters</option>
+            <option value="Advising Bank Country">Advising Bank Country</option>
+            <option value="Other">Other</option>
+          </select>
+          <span class="title">
+          <input name="NEW_EXPIRY_PLC_NA"  id="NEW_EXPIRY_PLC_NA" title="New Expiry Place(Other)" class="CHAR_P" size=36 maxlength=36>  
+          <input type="hidden" name="TEMP_EXPIRY_PLC_NA" id="TEMP_EXPIRY_PLC_NA" class="CHAR_O" size=29 maxlength=29 >
+          </span></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Increase Amount by </td>
+        <td class="td_gray"><a onMouseOut="hiddenCale(this)" onMouseOver="visibleCale(this)">
+          <input name="INC_AMT" id="INC_AMT" class="AMT_P" title = "Increase Amount"  size = "15" maxlength="15">
+          </a></td>
+        <td rowspan="4" class="td_gray">New Additional Amounts Covered[39C]</td>
+        <td rowspan="4" class="td_gray"><textarea name="NEW_ADDIT_COV_AMT" id="NEW_ADDIT_COV_AMT" title="Additional Amounts Covered" cols="35" rows="4" class="CHAR_P" ></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Decrease Amount by</td>
+        <td class="td_gray"><input name="DEC_AMT" id="DEC_AMT" class="AMT_P" title="Decrease Amount"  size="15" maxlength="15"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">New LC Amount (+ Bene Consent) </td>
+        <td class="td_gray"><input name="NEW_LC_AMT_ACPT" id="NEW_LC_AMT_ACPT" class="AMT_P" title="New LC Balance (+Bene Constent)"  size="15"  maxlength="15"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">New Tolerance [39A] (or + / -)</td>
+        <td class="td_gray"><select name="NEW_AMT_SPEC" id="NEW_AMT_SPEC" title="Amount Specification" class="CHAR_P">
+            <option value="" selected> </option>
+            <option value="NOT EXCEEDING" >NOT EXCEEDING</option>
+            <option value="ABOUT">ABOUT</option>
+          </select>
+          or
+          <input name="NEW_POS_TOL" id="NEW_POS_TOL" type="text" class="INT_P" title="Positive Tolerance" size="2" maxlength=2>
+          /
+          <input name="NEW_NEG_TOL" id="NEW_NEG_TOL" type="text"class="INT_P" title="Negative Tolerance"  size="2" maxlength=2>
+          <input name="TEMP_TAG_39A" type="hidden" class="CHAR_O" title="TEMP_TAG_39A"  size="5" maxlength=5></td>
+      </tr>
+      <tr>
+        <td align="left" valign="bottom" class="td_gray" colspan="9"><img src="../Images/roundedge_bottom.gif" width="120" height="22"></td>
+      </tr>
+    </table>
+  </div>
+  <div id="X_div" class="HIDDEN_DIV">
+    
+<Script language="javascript" src="../JS/MHBK/US/SSSS_SRC_Documentsoutput.js?lastchange=1438731506000"></Script>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="4" class="title">Documents Output</td>
+  </tr>
+  <tr>
+    <td width="20%"  class="td_gray">Document Date</td>
+    <td width="30%"  class="td_gray"><input type="text"  onClick="SYT_doCalendar(this);" name="TEMP_DOC_DT" id="TEMP_DOC_DT" title="Document Date" class="DATE_O" size="10" maxlength="10"></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td  class="td_gray">&nbsp;</td>
+    <td  class="td_gray">&nbsp;</td>
+    <td width="20%" class="td_gray">&nbsp;</td>
+    <td width="33%" class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="title">User information</td>
+    <td colspan="2" class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">User  Name</td>
+    <td class="td_gray"><input type="text" name="TEMP_USER_NM" id="TEMP_USER_NM" title="User Name" class="CHAR_O" length="35" size="35" maxlength="35" ></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray"><span class="td_gray">User Telephone</span></td>
+    <td class="td_gray"><input type="text" name="TEMP_USER_TEL_NO" id="TEMP_USER_TEL_NO" title="User Telephone No" class="CHAR_O" size="20" maxlength="20"></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">User Fax</td>
+    <td class="td_gray"><span class="td_gray">
+      <input type="text" name="TEMP_USER_FAX" id="TEMP_USER_FAX" title="User Fax" class="CHAR_O" length="20" size="20" maxlength="20">
+    </span></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">User Email</td>
+    <td class="td_gray"> 
+      <input type="text" name="TEMP_USER_EMAIL" id="TEMP_USER_EMAIL" title="User Email" class="CHAR_O" length="40" size="50" maxlength="50">     </td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="title">Customer Advices</td>
+    <td colspan="2" class="title">Correspondent Advices</td>
+  </tr>
+  <tr>
+    <td class="td_gray">Introduction</td>
+    <td class="td_gray"><p>
+      <textarea name="TEMP_CUST_INSTR" id="TEMP_CUST_INSTR" title="Customer Advices Introduction" class="CHAR_O" rows="20" cols="65" style="height:155"></textarea>
+     <input type="button" name="button1" value="Clause"></td>
+    <td class="td_gray">Introduction </td>
+    <td class="td_gray"><textarea name="TEMP_CORR_INSTR" id="TEMP_CORR_INSTR" title="Correspondent Advices Introduction" class="CHAR_O" rows="20" cols="65" style="height:155"></textarea>
+	<input type="button" name="button2" value="Clause"></td>
+  </tr>
+  <tr>
+    <td class="td_gray">Correspondence</td>
+    <td class="td_gray"><textarea name="TEMP_CUST_CRSPD" id="TEMP_CUST_CRSPD" title="Customer Advices Correspondence" class="CHAR_O" rows="20" cols="65" style="height:155"></textarea>
+	<input type="button" name="button3" value="Clause" ></td>
+    <td class="td_gray">Correspondence</td>
+    <td class="td_gray"><textarea name="TEMP_CORR_CRSPD" id="TEMP_CORR_CRSPD" title="Correspondent Advices Correspondence" class="CHAR_O" rows="20" cols="65" style="height:155"></textarea>
+	<input type="button" name="button4" value="Clause"></td>
+  </tr>
+
+  <tr>
+    <td class="td_gray">Attachments/  Copy To</td>
+    <td class="td_gray"><textarea name="TEMP_CUST_ATTCH" id="TEMP_CUST_ATTCH" title="Attachments/ Copy To" class="CHAR_O" rows="6" cols="65" style="height:155"></textarea>
+	<input type="button" name="button5" value="Clause" ></td>
+    <td class="td_gray">Attachments/  Copy To</td>
+    <td class="td_gray"><textarea name="TEMP_CORR_ATTCH" id="TEMP_CORR_ATTCH" title="Attachments/ Copy To" class="CHAR_O" rows="6" cols="65" style="height:155"></textarea>
+	<input type="button" name="button6" value="Clause"></td>
+  </tr>
+ <tr>
+        <td align="left" valign="bottom" class="td_gray" colspan="4"><img src="../Images/roundedge_bottom.gif" width="120" height="22"></td>
+      </tr> 
+</table>
+
+
+    <table width="100%" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="title"><b>For the Account of </b></td>
+    <td class="td_gray"><a  onclick="SYT_VisibleNote('FORACOF_NOTES')" href="#">View Notes</a>
+      <!--textarea style="display:none" name="APPL_NOTES" cols="35" rows="6"></textarea-->
+      <input type="hidden" name="FORACOF_NOTES" id="FORACOF_NOTES">
+      <input type="hidden" id="FORACOF_CNTY_CODE" name="FORACOF_CNTY_CODE">
+      <input type="hidden" id="FORACOF_TEAM_NM" name="FORACOF_TEAM_NM">
+      <input type="hidden" id="FORACOF_TEMP_TEAM_NM" name="FORACOF_TEMP_TEAM_NM"></td>
+    <td  class="title">&nbsp;</td>
+    <td  class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">Same as Applicant?</td>
+    <td class="td_gray"><select name="SAME_AS_APPL_FLG" id="SAME_AS_APPL_FLG" class="CHAR_M" title="Same as Applicant Flag">
+      <option value="No">No</option>
+      <option value="Yes">Yes</option>
+	  <option value="" selected></option>
+    </select></td>
+    <td  class="td_gray">&nbsp;</td>
+    <td  class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray" width="20%">ID</td>
+    <td class="td_gray" width="30%"><input name="FORACOF_ID" id="FORACOF_ID" title="For the Account of ID" class="CHAR_O" size=12 maxlength=12 >
+      <input type="button" name="FORACOF_ID_BTN"  value="..." style="width:25; height:20"></td>
+    <td  class="td_gray" width="20%">&nbsp;</td>
+    <td  class="td_gray" width="30%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">Name </td>
+    <td class="td_gray"><input name="FORACOF_NM" id="FORACOF_NM" title="For the Account of Name" class="CHAR_O" size="35" maxlength=35>
+      <input type="button" name="FORACOF_ADD_BTN"  value="..." style="width:25; height:20"></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">Address </td>
+    <td class="td_gray"><input name="FORACOF_ADD1" id="FORACOF_ADD1" type="text"  class="CHAR_O"  title="For the Account of Address1"  size=35 maxlength="35">
+      <input type="hidden" id="FORACOF_ORDER_NO" name="FORACOF_ORDER_NO">
+      <input type="hidden" id="FORACOF_ORDER_POST" name="FORACOF_ORDER_POST"></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray"><input name="FORACOF_ADD2" id="FORACOF_ADD2" type="text"  class="CHAR_O" title="For the Account of Address2" size=35 maxlength="35"></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray"><input name="FORACOF_ADD3" id="FORACOF_ADD3" type="text"  class="CHAR_O" title="For the Account of Address3"size=35 maxlength="35"></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">Mailing Address</td>
+    <td class="td_gray"><textarea name="FORACOF_MAIL_ADD" cols="35" rows="6" class="CHAR_O" id="FORACOF_MAIL_ADD" title="For the Account of Mail Address"></textarea>
+      <input type="button" name="FORACOF_POST_ADD_BTN"  value="..." style="width:25; height:20"></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray"> Reference No </td>
+    <td class="td_gray"><input type="text" name="FORACOF_REF" id="FORACOF_REF" title="For the Account of Reference" class="CHAR_O" size="16" maxlength="16"></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">Language</td>
+    <td class="td_gray"><select name="FORACOF_LANG" id="FORACOF_LANG" class="CHAR_O" title="For the Account of Language">
+        <option value="German" >German</option>
+        <option value="English" selected>English</option>
+        <option value="French">French</option>
+        <option value="Italian">Italian</option>
+        <option value="Spanish">Spanish</option>
+      </select></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">Correspondence Medium</td>
+    <td class="td_gray"><select name="FORACOF_CORR_MED" id="FORACOF_CORR_MED" class="CHAR_M" title="For the Account of Correspondence Medium">
+        <option value="Mail">Mail</option>
+        <option value="Email">Email</option>
+        <option value="Fax">Fax</option>
+        <option value="None" selected>None</option>
+      </select></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">Email Address </td>
+    <td class="td_gray"><input name="FORACOF_EMAIL" id="FORACOF_EMAIL" class="CHAR_O" title="For the Account of Email Address"  size="55" maxlength="50"></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="24" class="td_gray">Fax NO.</td>
+    <td class="td_gray"><input  name="FORACOF_FAX" id="FORACOF_FAX" class="CHAR_O" size="20" maxlength="20" title="For the Account of Fax No">
+      <input type="hidden" id="FORACOF_TLX" name="FORACOF_TLX"></td>
+    <td class="td_gray">&nbsp;</td>
+    <td class="td_gray">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="td_gray">Account Office Code </td>
+    <td class="td_gray"><input type="text" name="FORACOF_AC_OFF_CODE" id="FORACOF_AC_OFF_CODE" title="For the Account of Account Officer Code" class="CHAR_O" size="11" maxlength="11"></td>
+    <td width="20%" class="td_gray">&nbsp;</td>
+    <td width="30%" class="td_gray">&nbsp;</td>
+  </tr>
+</table>		
+  </div>
+  <div id="O_div" class="HIDDEN_DIV">
+    <table  width="100%"  cellpadding="0" cellspacing="0">
+     <tr>
+        <td colspan="2"class="title"><B>Tenor Information </B>
+          <input type="hidden" name="TENOR_TEMP" id="TENOR_TEMP"></td>
+		<td colspan="2"class="title"><B>New Tenor Information</B>
+          </td>  
+      </tr>
+      <tr>
+        <td class="td_gray" width="20%">Available By </td>
+        <td class="td_gray" width="30%"><select name="AVAL_BY" id="AVAL_BY" title="Available By (Tag41 P2)" class="CHAR_P">
+            <option value="BY PAYMENT">By Payment</option>
+            <option value="BY ACCEPTANCE">By Acceptance</option>
+            <option value="BY NEGOTIATION" selected>By Negotiation</option>
+            <option value="BY DEF PAYMENT">By Def Payment</option>
+            <option value="BY MIXED PYMT">BY MIXED PYMT</option>
+          </select></td>
+        <td class="td_gray" width="20%">Available By </td>
+        <td class="td_gray" width="30%"><select name="NEW_AVAL_BY" id="NEW_AVAL_BY" title="Available By (Tag41 P2)" class="CHAR_O">
+            <option value="" selected></option>
+            <option value="BY PAYMENT">By Payment</option>
+            <option value="BY ACCEPTANCE">By Acceptance</option>
+            <option value="BY NEGOTIATION">By Negotiation</option>
+            <option value="BY DEF PAYMENT">By Def Payment</option>
+            <option value="BY MIXED PYMT">BY MIXED PYMT</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td class="td_gray" >Tenor</td>
+        <td class="td_gray"><input type="text" name="TENOR_DAYS" id="TENOR_DAYS" title="Tenor Days" class="INT_P" size="4" maxlength="4">
+          Days
+          <select name="TENOR_TYPE" id="TENOR_TYPE" title="Tenor Type" class="CHAR_P">
+            <option value="" selected=></option>
+            <option value="DAYS AFTER SIGHT">DAYS AFTER SIGHT</option>
+            <option value="DAYS AFTER B/L DATE">DAYS AFTER B/L DATE</option>
+            <option value="DAYS AFTER AWB">DAYS AFTER AWB</option>
+            <option value="DAYS SHIPMENT">DAYS SHIPMENT</option>
+            <option value="OTHER">OTHER</option>
+          </select></td>
+        <td class="td_gray" >Tenor</td>
+        <td class="td_gray"><input type="text" name="NEW_TENOR_DAYS" id="NEW_TENOR_DAYS" title="Tenor Days" class="INT_O" size="4" maxlength="4">
+          Days
+          <select name="NEW_TENOR_TYPE" id="NEW_TENOR_TYPE" title="Tenor Type" class="CHAR_O">
+      <option value="" selected></option>
+      <option value="DAYS AFTER SIGHT">DAYS AFTER SIGHT</option>
+      <option value="DAYS AFTER B/L DATE">DAYS AFTER B/L DATE</option>
+      <option value="DAYS AFTER AWB">DAYS AFTER AWB</option>
+      <option value="DAYS SHIPMENT">DAYS SHIPMENT</option>
+      <option value="OTHER">OTHER</option>
+  </select></td>
+      </tr>
+      <tr>
+        <td width="20%" class="td_gray" ><span style="display:none">Individual Drawing</span></td>
+        <td width="30%" class="td_gray"><span style="display:none">
+          <select name="INDIVID_DRAW_FLG" id="INDIVID_DRAW_FLG" title="Individual Drawing" class="CHAR_P" >
+            <option value="Yes">Yes</option>
+            <option value="No" selected>No</option>
+          </select>
+          </span></td>
+        <td width="20%" class="td_gray" ></td>
+        <td width="20%" class="td_gray" ></td>		  
+      </tr>
+      <tr>
+        <td class="td_gray">Mixed Payment Details</td>
+        <td class="td_gray"><textarea name="MIX_PMT_DETL" id="MIX_PMT_DETL" title="Mix Payment Details" class="CHAR_P" cols="35" rows="4"></textarea></td>
+        <td class="td_gray">Mixed Payment Details</td>
+        <td class="td_gray"><textarea name="NEW_MIX_PMT_DETL" id="NEW_MIX_PMT_DETL" title="Mix Payment Details" class="CHAR_O" cols="35" rows="4"></textarea></td>
+      </tr>
+
+      <tr>
+        <td class="td_gray">Negotiation/Deferred Payment Details [42P]</td>
+        <td class="td_gray"><textarea name="DEF_PMT_DET" cols="35" rows="4" class="CHAR_P" id="DEF_PMT_DET" title="Deferred Payment Details"></textarea></td>
+        <td class="td_gray">Negotiation/Deferred Payment Details [42P]</td>
+        <td class="td_gray"><textarea name="NEW_DEF_PMT_DET" cols="35" rows="4" class="CHAR_O" id="NEW_DEF_PMT_DET" title="Deferred Payment Details"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray" >Drafts at [ 42C ]</td>
+        <td class="td_gray"><textarea name="DRAFTS_AT" cols="35" rows="3" class="CHAR_P" id="DRAFTS_AT" title="Drafts At"></textarea></td>
+        <td class="td_gray">Drafts at [ 42C ]</td>
+        <td class="td_gray"><textarea name="NEW_DRAFTS_AT" cols="35" rows="3" class="CHAR_O" id="NEW_DRAFTS_AT" title="Drafts At"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="title"><b>Drawee[42A]</b></td>
+        <td class="td_gray"><a  onClick="SYT_VisibleNote('DRWE_NOTES')" href="#">View Notes</a>
+          <input type="hidden" name="DRWE_NOTES" id="DRWE_NOTES"></td>
+        <td class="title"><b>New Drawee [42A]</b></td>
+        <td class="td_gray"><a  onClick="SYT_VisibleNote('NEW_DRWE_NOTES')" href="#">View Notes</a>
+            <input type="hidden" name="NEW_DRWE_NOTES" id="NEW_DRWE_NOTES"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Drawee ID</td>
+        <td class="td_gray"><input name="DRWE_ID" class="CHAR_P" id="DRWE_ID" title="Drawee ID"size=12>
+          <input name="DRW_ID_BTN" type="button" id="DRW_ID_BTN" style="width:25; height:20"value="..." disabled="disabled"></td>
+        <td class="td_gray">Drawee ID</td>
+        <td class="td_gray"><input name="NEW_DRWE_ID" class="CHAR_O" id="NEW_DRWE_ID" title="Drawee ID"size=12>
+            <input name="NEW_DRWE_ID_BTN" type="button" id="NEW_DRWE_ID_BTN" style="width:25; height:20"value="..."></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Name</td>
+        <td class="td_gray"><input name="DRWE_NM" class="CHAR_P" id="DRWE_NM" title="Drawee Name" size="35" >
+          <input name="DRWE_ADD_BTN" type="button" id="DRWE_ADD_BTN" style="width:25; height:20" value="..." disabled></td>
+        <td class="td_gray">Name</td>
+        <td class="td_gray"><input name="NEW_DRWE_NM" class="CHAR_O" id="NEW_DRWE_NM" title="Drawee Name" size="35" >
+            <input name="NEW_DRWE_ADD_BTN" type="button" id="NEW_DRWE_ADD_BTN" style="width:25; height:20" value="..." disabled></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input name="DRWE_ADD1" id="DRWE_ADD1" type="text"  class="CHAR_P"  title=" Drawee Address 1"  size=35 maxlength="35">
+          <input type="hidden" id="DRWE_ORDER_NO" name="DRWE_ORDER_NO"></td>
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input name="NEW_DRWE_ADD1" id="NEW_DRWE_ADD1" type="text"  class="CHAR_O"  title=" Drawee Address 1"  size=35 maxlength="35">
+            <input type="hidden" id="NEW_DRWE_ORDER_NO" name="NEW_DRWE_ORDER_NO"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="DRWE_ADD2" id="DRWE_ADD2" type="text"  class="CHAR_P"  title=" Drawee Address 2"  size=35 maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="NEW_DRWE_ADD2" id="NEW_DRWE_ADD2" type="text"  class="CHAR_O"  title=" Drawee Address 2"  size=35 maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="DRWE_ADD3" id="DRWE_ADD3" type="text"  class="CHAR_P"  title=" Drawee Address 3"  size=35 maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="NEW_DRWE_ADD3" id="NEW_DRWE_ADD3" type="text"  class="CHAR_O"  title=" Drawee Address 3"  size=35 maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Swift Address </td>
+        <td class="td_gray"><select name="DRWE_SW_TAG" id="DRWE_SW_TAG"  class="CHAR_P" title="Drawee SWIFT Tag">
+            <option value="A" >A</option>
+            <option value="D" >D</option>
+            <option value=""selected ></option>
+          </select>
+          <input name="DRWE_SW_ADD" id="DRWE_SW_ADD" type="text" class="CHAR_P" title="Drawee  SWIFT Address" size="11" maxlength="11"></td>
+        <td class="td_gray">Swift Address </td>
+        <td class="td_gray"><select name="NEW_DRWE_SW_TAG" id="NEW_DRWE_SW_TAG"  class="CHAR_O" title="Drawee SWIFT Tag">
+            <option value="A" >A</option>
+            <option value="D" >D</option>
+            <option value=""selected ></option>
+          </select>
+            <input name="NEW_DRWE_SW_ADD" id="NEW_DRWE_SW_ADD" type="text" class="CHAR_O" title="Drawee  SWIFT Address" size="11" maxlength="11"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="title">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="title"><b>Available With Bank[41A]</b></td>
+        <td class="td_gray"><select name="AVAL_WT_BK_OPT" id="AVAL_WT_BK_OPT" class="CHAR_P" title="Available Bank Options">
+            <option value="Opening Bank" selected>Opening Bank</option>
+            <option value="Any Bank">Any Bank</option>
+            <option value="Advising Bank">Advising Bank</option>
+            <option value="Confirming Bank">Confirming Bank</option>
+            <option value="Advise Thru Bank">Advise Thru Bank</option>
+          </select>
+            <a  onClick="SYT_VisibleNote('AVAL_WT_BK_NOTES')" href="#">View Notes</a>
+            <input type="hidden" name="AVAL_WT_BK_NOTES" id="AVAL_WT_BK_NOTES"></td>
+        <td class="title"><b>New Available With Bank[41A]</b></td>
+        <td class="td_gray"><select name="NEW_AVAL_WT_BK_OPT" id="NEW_AVAL_WT_BK_OPT" class="CHAR_O" title="Available Bank Options">
+            <option value="" selected></option>		
+            <option value="Opening Bank">Opening Bank</option>
+            <option value="Any Bank">Any Bank</option>
+            <option value="Advising Bank">Advising Bank</option>
+            <option value="Confirming Bank">Confirming Bank</option>
+            <option value="Advise Thru Bank">Advise Thru Bank</option>
+          </select>
+            <a  onClick="SYT_VisibleNote('NEW_AVAL_WT_BK_NOTES')" href="#">View Notes</a>
+            <input type="hidden" name="NEW_AVAL_WT_BK_NOTES" id="NEW_AVAL_WT_BK_NOTES"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Bank ID</td>
+        <td class="td_gray"><input valign="top" class="CHAR_P" size=12 name="AVAL_WT_BK_ID" id="AVAL_WT_BK_ID" title="Available with Bank ID" >
+            <input type="button" name="AVLBL_BK_ID_BTN" value="..." style="width:25; height:20" disabled></td>
+        <td class="td_gray">Bank ID</td>
+        <td class="td_gray"><input valign="top" class="CHAR_O" size=12 name="NEW_AVAL_WT_BK_ID" id="NEW_AVAL_WT_BK_ID" title="Available with Bank ID" >
+            <input type="button" name="NEW_AVLBL_BK_ID_BTN" value="..." style="width:25; height:20"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Name</td>
+        <td class="td_gray"><input name="AVAL_WT_BK_NM" id="AVAL_WT_BK_NM" title="Available with Bank Name" class="CHAR_P" size="35" maxlength="35" align="left" >
+            <input name="AVAL_WT_BK_ADD_BTN" type="button" id="AVAL_WT_BK_ADD_BTN" style="width:25; height:20" value="..." disabled></td>
+        <td class="td_gray">Name</td>
+        <td class="td_gray"><input name="NEW_AVAL_WT_BK_NM" id="NEW_AVAL_WT_BK_NM" title="Available with Bank Name" class="CHAR_O" size="35" maxlength="35" align="left" >
+            <input name="NEW_AVAL_WT_BK_ADD_BTN" type="button" id="NEW_AVAL_WT_BK_ADD_BTN" style="width:25; height:20" value="..." disabled></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input name="AVAL_WT_BK_ADD1" id="AVAL_WT_BK_ADD1" type="text"  class="CHAR_P"  title=" Avaliable with Bank Address1"  size=35 maxlength="35" >
+            <input type="hidden" id="AVAL_WT_BK_ORDER_NO" name="AVAL_WT_BK_ORDER_NO"></td>
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input name="NEW_AVAL_WT_BK_ADD1" id="NEW_AVAL_WT_BK_ADD1" type="text"  class="CHAR_O"  title=" Avaliable with Bank Address1"  size=35 maxlength="35" >
+            <input type="hidden" id="NEW_AVAL_WT_BK_ORDER_NO" name="NEW_AVAL_WT_BK_ORDER_NO"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="AVAL_WT_BK_ADD2" id="AVAL_WT_BK_ADD2" type="text"  class="CHAR_P"  title="Avaliable with Bank Address2"  size=35 maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="NEW_AVAL_WT_BK_ADD2" id="NEW_AVAL_WT_BK_ADD2" type="text"  class="CHAR_O"  title="Avaliable with Bank Address2"  size=35 maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="AVAL_WT_BK_ADD3" id="AVAL_WT_BK_ADD3" type="text"  class="CHAR_P"  title=" Avaliable with Bank Address3"  size=35 maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="NEW_AVAL_WT_BK_ADD3" id="NEW_AVAL_WT_BK_ADD3" type="text"  class="CHAR_O"  title=" Avaliable with Bank Address3"  size=35 maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Swift Address</td>
+        <td class="td_gray"><select name="AVAL_WT_BK_SW_TAG" id="AVAL_WT_BK_SW_TAG" class="CHAR_P" title="Available with Bank SWIFT Tag" >
+            <option value="A" >A</option>
+            <option value=""selected ></option>
+            <option value="D" >D</option>
+          </select>
+            <input name="AVAL_WT_BK_SW_ADD" type="text" class="CHAR_P" id="AVAL_WT_BK_SW_ADD" title="Available Bank SWIFT Address" size="11" maxlength="11"></td>
+        <td class="td_gray">Swift Address</td>
+        <td class="td_gray"><select name="NEW_AVAL_WT_BK_SW_TAG" id="NEW_AVAL_WT_BK_SW_TAG" class="CHAR_O" title="Available with Bank SWIFT Tag" >
+            <option value="A" >A</option>
+            <option value="D" >D</option>
+            <option value=""selected ></option>
+          </select>
+            <input name="NEW_AVAL_WT_BK_SW_ADD" type="text" class="CHAR_O" id="NEW_AVAL_WT_BK_SW_ADD" title="Available Bank SWIFT Address" size="11" maxlength="11"></td>
+      </tr>
+      <tr>
+        <td align="left" valign="bottom" class="td_gray" colspan="9"><img src="../Images/roundedge_bottom.gif" width="120" height="22"></td>
+      </tr>
+    </table>
+  </div> 
+  <div id="G_div" class="HIDDEN_DIV"> 
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2" align="left" class="title" ><b>Original Instructions</b><strong> </strong></td>
+        <td colspan="2" align="left" class="title" ><b>New Instructions</b><strong> </strong></td>		
+      </tr>
+      <tr>
+        <td class="td_gray" width="20%">Presentation Days and Type</td>
+        <td class="td_gray" width="30%"><input name="PRES_DAYS" id="PRES_DAYS" type="text" title="Presentation Days" class="INT_P"  size="3" maxlength="3">
+          <select name="PRES_TYPE" id="PRES_TYPE" title="Presentation Type" class="CHAR_P">
+            <option value="" selected></option>
+            <option value="Days from shipment date" selected>Days from shipment date</option>
+            <option value="Days from B/L date">Days from B/L date</option>
+          </select></td>
+        <td width="20%" class="td_gray">Presentation Days and Type</td>
+        <td width="30%" class="td_gray"><input name="AMD_PRES_DAYS" id="AMD_PRES_DAYS" type="text" title="Presentation Days" class="INT_O"  size="3" maxlength="3">
+            <select name="AMD_PRES_TYPE" id="AMD_PRES_TYPE" title="Presentation Type" class="CHAR_O">
+              <option value="" selected></option>
+              <option value="Days from shipment date" selected>Days from shipment date</option>
+              <option value="Days from B/L date">Days from B/L date</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td class="td_gray" width="20%">Period for Presentation in Days[48]</td>
+        <td class="td_gray" width="30%"><input name="PRES_PRD_TXT" class="CHAR_P" id="PRES_PRD_TXT" title= "Period for Presentation" size="40" maxlength="39" /></td>
+        <td class="td_gray">Period for Presentation in Days[48]</td>
+        <td class="td_gray"><input name="AMD_PRES_PRD_TXT" class="CHAR_O" id="AMD_PRES_PRD_TXT" title= "Period for Presentation" size="40" maxlength="39" /></td>
+      </tr>
+      <tr>
+        <td class="td_gray"><span class="td_gray_des">Charges [71D]</span></td>
+        <td class="td_gray"><textarea name="CHARGES" id="CHARGES" title="CHARGES" class="CHAR_P" rows="6" cols="35"></textarea></td>
+        <td class="td_gray"><span class="td_gray_des">Charges [71D]</span></td>
+        <td class="td_gray"><textarea name="AMD_CHARGES" id="AMD_CHARGES" title="CHARGES" class="CHAR_O" rows="6" cols="35"></textarea>
+            <input type="hidden" name="AMD_CHARGES_CLAUSE_BTN" id="AMD_CHARGES_CLAUSE_BTN" value="Clause" ></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Instructions to Paying Bank[78]</td>
+        <td class="td_gray"><textarea name="INSTR_TO_PAY_BK" cols="65" rows="12" class="CHAR_P"  style="height:140;" id="textarea" title="Instruction to the P/A/N Bank (Tag78)"></textarea></td>
+        <td class="td_gray">Instructions to Paying Bank[78]</td>
+        <td class="td_gray"><textarea name="AMD_INSTR_TO_PAY_BK" cols="65" rows="12" class="CHAR_O"  style="height:140;" id="AMD_INSTR_TO_PAY_BK" title="Instruction to the P/A/N Bank (Tag78)"></textarea>
+            <input type="hidden" name="AMD_INSTR_TO_PAY_BK_BTN" id="AMD_INSTR_TO_PAY_BK_BTN" value="Clause" ></td>
+      </tr>
+      <tr>
+        <td class="td_gray"> Additional Conditions [47A] </td>
+        <td class="td_gray"><textarea name="ADDIT_CONDITION" cols="65" rows="800" class="CHAR_O" id="ADDIT_CONDITION" style="height:160;" title="Additional Condition (Tag47A)"></textarea></td>
+        <td class="td_gray"> Additional Conditions [47B] </td>
+        <td class="td_gray"><textarea name="AMD_ADDIT_CONDITION" cols="65" rows="800" class="CHAR_O" id="AMD_ADDIT_CONDITION" style="height:160;" title="Additional Condition (Tag47A)"></textarea>
+            <input type="hidden" name="AMD_ADDIT_CONDITION_CLAUSE_BTN" id="AMD_ADDIT_CONDITION_CLAUSE_BTN" value="Clause"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Send to Receiver Information [72Z]</td>
+        <td class="td_gray"><textarea name="SEND_TO_RCV_INFO" cols="35" rows="6" class="CHAR_P" id="SEND_TO_RCV_INFO" style="height:100;" title="Sender To Receiver Information (Tag72)"></textarea></td>
+        <td class="td_gray">Send to Receiver Information [72Z]</td>
+        <td class="td_gray"><textarea name="AMD_SEND_TO_RCV_INFO" cols="35" rows="6" class="CHAR_O" id="AMD_SEND_TO_RCV_INFO" style="height:100;" title="Sender To Receiver Information (Tag72)"></textarea>
+            <input type="hidden" name="AMD_SEND_TO_RCV_INFO_CLAUSE_BTN" id="AMD_SEND_TO_RCV_INFO_CLAUSE_BTN" value="Clause"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Special Payment Conditions for Beneficiary[49G]</td>
+        <td class="td_gray"><textarea name="PAY_COND_TO_BENE" cols="65" rows="800" class="CHAR_O"  style="height:140;" id="PAY_COND_TO_BENE" title="Special Payment Conditions for Beneficiary (Tag49G)"></textarea></td>
+        <td class="td_gray">Special Payment Conditions for Beneficiary[49M]</td>
+        <td class="td_gray"><textarea name="AMD_PAY_COND_TO_BENE" cols="65" rows="800" class="CHAR_O"  style="height:140;" id="AMD_PAY_COND_TO_BENE" title="Special Payment Conditions for Beneficiary (Tag49G)"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Special Payment Conditions for Receiving Bank[49H]</td>
+        <td class="td_gray"><textarea name="PAY_COND_TO_REV_BK" cols="65" rows="800" class="CHAR_O"  style="height:140;" id="PAY_COND_TO_REV_BK" title="Special Payment Conditions for Receiving Bank (Tag49H)"></textarea></td>
+        <td class="td_gray">Special Payment Conditions for Receiving Bank[49N]</td>
+        <td class="td_gray"><textarea name="AMD_PAY_COND_TO_REV_BK" cols="65" rows="800" class="CHAR_O"  style="height:140;" id="AMD_PAY_COND_TO_REV_BK" title="Special Payment Conditions for Receiving Bank (Tag49H)"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Confirmation Charges Payable By [71M]</td>
+        <td class="td_gray"><select name="CONF_CHG_PAY_BY" id="CONF_CHG_PAY_BY" title="Confirmation Charges Payable By" class="CHAR_O" maxlength="4">
+            <option value="APPL" >APPL</option>
+            <option value="BENE" >BENE</option>
+            <option value="" selected></option>
+        </select></td>
+        <td class="td_gray">Amendment Charge Payable By [71N]</td>
+        <td class="td_gray" ><select name="AMD_CHG_PAY_BY" id="AMD_CHG_PAY_BY" title="Amendment Charge Payable By" class="CHAR_O" maxlength="4">
+          <option value="APPL" >APPL</option>
+          <option value="BENE" >BENE</option>
+          <option value="OTHR" >OTHR</option>
+          <option value="" selected></option>
+        </select>
+          <input type="hidden" name="TEMP_AMD_CHG_PAY_BY" id="TEMP_AMD_CHG_PAY_BY"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray" ><textarea name="AMD_CHG_PAY_BY_NARR" id="AMD_CHG_PAY_BY_NARR" title="Amendment Charge Payable By Narrative" class="CHAR_O" cols="35" rows="6"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td colspan="3" class="td_gray"><strong>Please click CLAUSE button to include other 
+          additional condition clauses.</strong></td>
+      </tr>
+      <tr valign="bottom">
+        <td class="td_gray" colspan="4"><img src="../Images/roundedge_bottom.gif" width="120" height="22"></td>
+    </table>
+  </div>    
+  <div id="D_div" class="HIDDEN_DIV" >
+    <table  width="100%"  cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2" class="title" ><b>Shipment Information</b></td>
+        <td colspan="2" class="title" ><b>New Shipment Information</b></td>		
+      </tr>
+      <tr>
+        <td class="td_gray" width="20%">Partial Shipment[43P]</td>
+        <td class="td_gray" width="30%"><select name="PARTIAL_SHIP" id="PARTIAL_SHIP" title= "Partial Shipment" length="11" class="CHAR_P">
+            <option value=""></option>
+            <option value="NOT ALLOWED">NOT ALLOWED</option>
+            <option value="ALLOWED">ALLOWED</option>
+            <option value="CONDITIONAL">CONDITIONAL</option>
+          </select>
+          <input type="text" name="PARTIAL_SHIP_NARR" id="PARTIAL_SHIP_NARR" title="PARTIAL_SHIP_NARR" class="CHAR_P" size="35" maxlength="35"></td>
+        <td class="td_gray">Partial Shipment[43P]</td>
+        <td class="td_gray"><select name="NEW_PARTIAL_SHIP" id="NEW_PARTIAL_SHIP" title= "New Partial Shipment" length="11" class="CHAR_O">
+            <option value="" selected></option>
+            <option value="NOT ALLOWED">NOT ALLOWED</option>
+            <option value="ALLOWED">ALLOWED</option>
+            <option value="CONDITIONAL">CONDITIONAL</option>
+          </select>
+            <input type="text" name="NEW_PARTIAL_SHIP_NARR" id="NEW_PARTIAL_SHIP_NARR" title="New Partial Shipment Narrative" class="CHAR_O" size="35" maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray" width="20%">Ship From [44A]</td>
+        <td class="td_gray" width="30%"><textarea name="LOAD_PLACE" cols="65" rows="1" class="CHAR_P" id="LOAD_PLACE" title="Place of Receipt" maxlength="65"></textarea></td>
+        <td class="td_gray" width="20%">Place of Taking in Charge/Dispatch from.../Place of Receipt[44A]</td>
+        <td class="td_gray" width="30%"><textarea name="NEW_LOAD_PLACE" cols="65" rows="1" class="CHAR_O" id="NEW_LOAD_PLACE" title="New Place of Receipt" maxlength="65"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Port of Loading [44E]</td>
+        <td class="td_gray"><textarea name="LOAD_PORT" cols="65" rows="1" class="CHAR_P" id="LOAD_PORT" title="Port Of Loading" maxlength="65"></textarea></td>
+        <td class="td_gray">Port of Loading/Airport of Departure[44E]</td>
+        <td class="td_gray"><textarea name="NEW_LOAD_PORT" cols="65" rows="1" class="CHAR_O" id="NEW_LOAD_PORT" title="New Port Of Loading" maxlength="65"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Latest Shipment Date [44C]</td>
+        <td class="td_gray"><input name="LTST_SHIP_DT" id="LTST_SHIP_DT"  type="text" class="DATE_P" title="Latest Shipment Date" size="10" maxlength="10" onClick="SYT_doCalendar(this)"></td>
+        <td class="td_gray">Latest Shipment Date [44C]</td>
+        <td class="td_gray"><input name="NEW_LTST_SHIP_DT" id="NEW_LTST_SHIP_DT" type="text" class="DATE_O" title="New Latest Shipment Date" size="10" maxlength="10" onClick="SYT_doCalendar(this)">        </td>
+      </tr>
+      <tr>
+        <td class="td_gray">Shipment Period [44D]</td>
+        <td class="td_gray"><textarea name="SHIP_PRD" cols="65" rows="6" class="CHAR_P" id="SHIP_PRD" title="Shipment Period"></textarea></td>
+        <td class="td_gray">Shipment Period[44D]</td>
+        <td class="td_gray"><textarea name="NEW_SHIP_PRD" cols="65" rows="6" class="CHAR_O" id="NEW_SHIP_PRD" title="Shipment Period"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray" width="20%">Transhipment[43T]</td>
+        <td class="td_gray" width="30%"><select name="TNSHIP" id="TNSHIP" title= "Transhipment" length="11" class="CHAR_P">
+            <option value=""></option>
+            <option value="NOT ALLOWED">NOT ALLOWED</option>
+            <option value="ALLOWED">ALLOWED</option>
+            <option value="CONDITIONAL">CONDITIONAL</option>
+          </select>
+            <input type="text" name="TNSHIP_NARR" id="TNSHIP_NARR" title="TNSHIP_NARR" class="CHAR_P" size="35" maxlength="35"></td>
+        <td class="td_gray">Transhipment[43T]</td>
+        <td class="td_gray"><select name="NEW_TNSHIP" id="NEW_TNSHIP" title= "New Transhipment" length="11" class="CHAR_O">
+            <option value="" selected></option>
+            <option value="NOT ALLOWED">NOT ALLOWED</option>
+            <option value="ALLOWED">ALLOWED</option>
+            <option value="CONDITIONAL">CONDITIONAL</option>
+          </select>
+            <input type="text" name="NEW_TNSHIP_NARR" id="NEW_TNSHIP_NARR" title="New Transhipment Narrative" class="CHAR_O" size="35" maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray" width="20%">Ship To [44B]</td>
+        <td class="td_gray" width="30%"><textarea name="DEST_PLACE" cols="65" rows="1" class="CHAR_P" id="DEST_PLACE" title="Place of Delivery" maxlength="65"></textarea></td>
+        <td class="td_gray" width="20%">Place of Final Destination/For Transportation to.../Place of Delivery[44B]</td>
+        <td class="td_gray" width="30%"><textarea name="NEW_DEST_PLACE" cols="65" rows="1" class="CHAR_O" id="NEW_DEST_PLACE" title="New Place of Delivery" maxlength="65"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Port of Discharge [44F]</td>
+        <td class="td_gray"><textarea name="DEST_PORT" cols="65" rows="1" class="CHAR_P" id="DEST_PORT" title="Port Of Discharge" maxlength="65"></textarea></td>
+        <td class="td_gray">Port of Discharge/Airport of Destination[44F]</td>
+        <td class="td_gray"><textarea name="NEW_DEST_PORT" cols="65" rows="1" class="CHAR_O" id="NEW_DEST_PORT" title="New Port Of Discharge" maxlength="65"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Incoterms</td>
+        <td class="td_gray"><select name="INCOTERMS" class="CHAR_P" id="INCOTERMS" title="Incoterms">
+            <option value=""></option>
+            <option value="EXW">EXW</option>
+            <option value="FCA">FCA</option>
+            <option value="FAS">FAS</option>
+            <option value="FOB">FOB</option>
+            <option value="CFR">CFR</option>
+            <option value="CIF">CIF</option>
+            <option value="CPT">CPT</option>
+            <option value="CIP">CIP</option>
+            <option value="DAF">DAF</option>
+            <option value="DES">DES</option>
+            <option value="DEQ">DEQ</option>
+            <option value="DDU">DDU</option>
+            <option value="DDP">DDP</option>
+        </select></td>
+        <td class="td_gray">Incoterms</td>
+        <td class="td_gray"><select name="NEW_INCOTERMS" class="CHAR_O" id="NEW_INCOTERMS" title="New Incoterms">
+            <option value="" selected></option>
+            <option value="EXW">EXW</option>
+            <option value="FCA">FCA</option>
+            <option value="FAS">FAS</option>
+            <option value="FOB">FOB</option>
+            <option value="CFR">CFR</option>
+            <option value="CIF">CIF</option>
+            <option value="CPT">CPT</option>
+            <option value="CIP">CIP</option>
+            <option value="DAF">DAF</option>
+            <option value="DES">DES</option>
+            <option value="DEQ">DEQ</option>
+            <option value="DDU">DDU</option>
+            <option value="DDP">DDP</option>
+        </select></td>
+      </tr>
+      <tr valign="bottom">
+        <td class="td_gray" colspan="4"><img src="../Images/roundedge_bottom.gif" width="120" height="22"></td>
+      </tr>
+    </table>
+  </div>
+  <div id="B_div" class="HIDDEN_DIV" >
+    <table width="100%" cellspacing="0" cellpadding="0" colspan="4">
+      <tr>
+        <td width="50%" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0"> 
+      <tr> 
+        <td class="title"><strong>Applicant[50]</strong></td>
+        <td class="td_gray"><a  onclick="SYT_VisibleNote('APPL_NOTES')" href="#">View Notes</a> <!--textarea style="display:none" name="APPL_NOTES" cols="35" rows="6"></textarea--><input type="hidden" name="APPL_NOTES" id="APPL_NOTES">
+          <input type="hidden" id="TEAM_NM" name="TEAM_NM">
+          <input type="hidden" id="TEMP_TEAM_NAME" name="TEMP_TEAM_NAME">
+          <input type="hidden" name="APPL_REF" id="APPL_REF" title="Applicant Ref" class="CHAR_O" size="16" maxlength="16">
+          <input type="hidden" id="APPL_LANG" name="APPL_LANG">
+          <input type="hidden" id="APPL_MAIL_ADD" name="APPL_MAIL_ADD">
+          <input type="hidden" name="APPL_EMAIL" id="APPL_EMAIL" class="CHAR_O" title="Applicant Email Address"  size="55" maxlength="50">
+          <input type="hidden" name="APPL_FAX" id="APPL_FAX" class="CHAR_O" size="20" maxlength="20" title="Applicant Fax">
+          <input type="hidden" id="APPL_TLX" name="APPL_TLX">
+          <input type="hidden" id="APPL_CORR_MED" name="APPL_CORR_MED">		  
+          <input type="hidden" name="APPL_POST_ADD_BTN"  value="..." style="width:25; height:20">
+          <input type="hidden" name="AC_OFFICER_CODE" id="AC_OFFICER_CODE" title="Account Officer Code" class="CHAR_O" size="11" maxlength="11"></td>
+        <td class="title" width="20%"><b>New Applicant[50]</b></td>
+        <td class="td_gray" width ="30%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td class="td_gray" width="20%">ID</td> 
+        <td class="td_gray" width="30%"><input name="APPL_ID" id="APPL_ID" title="Applicant ID" class="CHAR_O" size=12 maxlength=12 >          
+          <input type="button" name="APPL_ID_BTN"  value="..." style="width:25; height:20"></td> 
+        <td class="td_gray" width="20%">ID</td>
+        <td class="td_gray" width="30%"><input name="NEW_APPL_ID" id="NEW_APPL_ID" title="New Applicant ID" class="CHAR_O" size=12 maxlength=12 >
+            <input type="button" name="NEW_APPL_ID_BTN"  value="..." style="width:25; height:20"></td>
+      </tr> 
+      <tr> 
+        <td class="td_gray">Name </td> 
+        <td class="td_gray"><input name="APPL_NM" id="APPL_NM" title="Applicant Name" class="CHAR_M" size="35" maxlength=35>
+        <input type="button" name="APPL_ADD_BTN"  value="..." style="width:25; height:20"></td> 
+        <td class="td_gray">Name </td>
+        <td class="td_gray"><input name="NEW_APPL_NM" id="NEW_APPL_NM" title="New Applicant Name" class="CHAR_O" size="35" maxlength=35>
+            <input type="button" name="NEW_APPL_ADD_BTN"  value="..." style="width:25; height:20"></td>
+      </tr> 
+      <tr> 
+        <td class="td_gray">Address </td> 
+        <td class="td_gray"><input name="APPL_ADD1" id="APPL_ADD1" type="text"  class="CHAR_O"  title=" Applicant Address 1"  size=35 maxlength="35">
+        <input type="hidden" id="APPL_ORDER_NO" name="APPL_ORDER_NO">
+        <input type="hidden" id="APPL_ORDER_POST" name="APPL_ORDER_POST"></td> 
+        <td class="td_gray">Address </td>
+        <td class="td_gray"><input name="NEW_APPL_ADD1" id="NEW_APPL_ADD1" type="text"  class="CHAR_O"  title="New Applicant Address 1"  size=35 maxlength="35">
+            <input type="hidden" id="NEW_APPL_ORDER_NO" name="NEW_APPL_ORDER_NO"></td>
+      </tr> 
+      <tr> 
+        <td class="td_gray">&nbsp;</td> 
+        <td class="td_gray"><input name="APPL_ADD2" id="APPL_ADD2" type="text"  class="CHAR_O" title=" Applicant Address 2" size=35 maxlength="35"></td> 
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="NEW_APPL_ADD2" id="NEW_APPL_ADD2" type="text"  class="CHAR_O" title="New Applicant Address 2" size=35 maxlength="35"></td>
+      </tr> 
+      <tr> 
+        <td class="td_gray">&nbsp;</td> 
+        <td class="td_gray"><input name="APPL_ADD3" id="APPL_ADD3" type="text"  class="CHAR_O" title=" Applicant Address 3"size=35 maxlength="35"></td> 
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="NEW_APPL_ADD3" id="NEW_APPL_ADD3" type="text"  class="CHAR_O" title="New Applicant Address 3"size=35 maxlength="35"></td>
+      </tr> 
+      <tr>
+        <td class="td_gray">CL No.</td>
+        <td class="td_gray"><input type="text" name="CL_NO" id="CL_NO" title="CL No" class="CHAR_P" size="20" maxlength="20"></td>
+        <td class="td_gray">C/L No</td>
+        <td class="td_gray"><input type="text" name="NEW_CL_NO" id="NEW_CL_NO" title="C/L No" class="CHAR_O" maxlength="25" size="25"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Country Code</td>
+        <td class="td_gray"><!--select name="APPL_CORR_MED" id="APPL_CORR_MED" class="CHAR_P" title="Applicant Correspondence Medium">
+            <option value="Mail">Mail</option>
+            <option value="Email">Email</option>
+            <option value="Fax">Fax</option>
+            <option value="None" selected>None</option>
+        </select-->
+        <input type="text" id="APPL_CNTY_CD" name="APPL_CNTY_CD" title="Applicant Country Code" class="CHAR_P" size="3" maxlength="2"></td> 
+        <td class="td_gray"> Country Code</td>
+        <td class="td_gray"><input type="text" name="NEW_APPL_CNTY" id="NEW_APPL_CNTY" title="Applicant Country Code" class="CHAR_O" size="2" maxlength="2"></td>
+      </tr> 
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td  class="title"><b>Beneficiary[59]</b></td>
+        <td  class="td_gray"><a onclick="SYT_VisibleNote('BENE_NOTES')" href="#">View Notes</a>
+            <input type="hidden" name="BENE_NOTES">
+            <input type="hidden" name="BENE_REF" id="BENE_REF" title="Beneficiary Reference" class="CHAR_O" size="16" maxlength="16">
+            <input type="hidden" id="BENE_LANG" name="BENE_LANG">
+            <input type="hidden" name="BENE_EMAIL" id="BENE_EMAIL" class="CHAR_O" title="Beneficiary Email Address" size="55" maxlength="40">
+            <input type="hidden" name="BENE_FAX" id="BENE_FAX" class="CHAR_O" size="20" maxlength="20">
+            <input type="hidden" id="BENE_TLX" name="BENE_TLX">
+            <input type="hidden" id="BENE_CORR_MED" name="BENE_CORR_MED">			
+            <input type="hidden" name="BENE_POST_ADD_BTN"  value="..." style="width:25; height:20">
+            <input type="hidden" name="BENE_AC_OFF_CODE" id="BENE_AC_OFF_CODE" title="Beneficiary Account Officer Code" class="CHAR_O" size="11" maxlength="11">
+            <input type="hidden" id="BENE_MAIL_ADD" name="BENE_MAIL_ADD"></td>
+        <td class="title" width="20%"><b>New Beneficiary[59]</b></td>
+        <td class="td_gray" width ="30%"><a onClick="SYT_VisibleNote('NEW_BENE_NOTES')" href="#">View Notes
+          <input type="hidden" name="NEW_BENE_NOTES" id="NEW_BENE_NOTES">
+          <input type="hidden" name="NEW_BENE_REF" id="NEW_BENE_REF" title="New Beneficiary Reference" class="CHAR_O" size="16" maxlength="16">
+          <input type="hidden" name="NEW_BENE_AC_OFF_CD" id="NEW_BENE_AC_OFF_CODE" title="Beneficiary Account Officer Code" class="CHAR_O" size="11" maxlength="11">
+          <input type="hidden" name="NEW_BENE_MAIL_ADD" cols="35" rows="6" class="CHAR_O" id="NEW_BENE_MAIL_ADD" title="New Beneficiary Beneficiary Mailing Address">
+          <input type="hidden" id="NEW_BENE_ORDER_POST" name="NEW_BENE_ORDER_POST">
+          <input name="NEW_BENE_POST_ADD_BTN" type="hidden" id="NEW_BENE_POST_ADD_BTN" style="width:25; height:20" value="...">
+          <input type="hidden" name="NEW_BENE_EMAIL" id="NEW_BENE_EMAIL" class="CHAR_O" title="New Beneficiary Email Address"  size="50" maxlength="50">
+          <input type="hidden" name="NEW_BENE_FAX" id="NEW_BENE_FAX" title="New Beneficiary Fax" class="CHAR_O" size="20" maxlength="20">
+          <input type="hidden" name="NEW_BENE_TLX" id="NEW_BENE_TLX">
+          <input type="hidden" name="NEW_BENE_LANG" id="NEW_BENE_LANG">		 
+          <input type="hidden" name="NEW_BENE_CORR_MED" id="NEW_BENE_CORR_MED">		   
+          <a onClick="SYT_VisibleNote('NEW_BENE_NOTES')" href="#">
+        </a></td>
+      </tr>
+      <tr>
+        <td  class="td_gray" width="20%">ID </td>
+        <td  class="td_gray" width="30%"><input name="BENE_ID" id="BENE_ID" title="Beneficiary ID" class="CHAR_O" size=12 maxlength=12 >
+            <input  type="button" name="BENE_ID_BTN" value="..." style="width:25; height:20" ></td>
+        <td class="td_gray">ID</td>
+        <td class="td_gray"><input name="NEW_BENE_ID" id="NEW_BENE_ID" title="New Beneficiary ID" class="CHAR_O" size="12" maxlength="12" >
+            <input type="button" name="NEW_BENE_ID_BTN" id="NEW_BENE_ID_BTN" value="..." style="width:25; height:20"></td>
+      </tr>
+      <tr>
+        <td class="td_gray"> Name</td>
+        <td class="td_gray"><input name="BENE_NM" id="BENE_NM" title="Beneficiary Name" class="CHAR_O" size=35 maxlength=35>
+            <input type="button" name="BENE_ADD_BTN"  value="..." style="width:25; height:20"></td>
+        <td class="td_gray">Name</td>
+        <td class="td_gray"><input type="text" name="NEW_BENE_NM" id="NEW_BENE_NM" class="CHAR_O" title="New Beneficiary Name" size="35" maxlength="35">
+            <input name="NEW_BENE_ADD_BTN" type="button" id="NEW_BENE_ADD_BTN" style="width:25; height:20" value="..."></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input name="BENE_ADD1" id="BENE_ADD1" type="text"  class="CHAR_O"  title=" Beneficiary Address 1"  size=35 maxlength="35">
+            <input type="hidden" id="BENE_ORDER_NO" name="BENE_ORDER_NO">
+            <input type="hidden" id="BENE_ORDER_POST" name="BENE_ORDER_POST"></td>
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input name="NEW_BENE_ADD1" id="NEW_BENE_ADD1" type="text"  class="CHAR_O"  title="New Beneficiary Address1"  size="35" maxlength="35">
+            <input type="hidden" id="NEW_BENE_ORDER_NO" name="NEW_BENE_ORDER_NO"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="BENE_ADD2" id="BENE_ADD2" type="text"  class="CHAR_O" title=" Beneficiary Address 2"  size=35 maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="NEW_BENE_ADD2" id="NEW_BENE_ADD2" type="text"  class="CHAR_O" title=" New Beneficiary Address2" size="35" maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="BENE_ADD3" id="BENE_ADD3" type="text"  class="CHAR_O" title=" Beneficiary Address 3"  size=35 maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="NEW_BENE_ADD3" id="NEW_BENE_ADD3" type="text"  class="CHAR_O" title=" New Beneficiary Address3"size="35" maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Account No</td>
+        <td class="td_gray"><input type="text" name="BENE_AC_NO" id="BENE_AC_NO" title="Beneficiary Account No" class="CHAR_O" size="35" maxlength="35"></td>
+        <td class="td_gray">Account No</td>
+        <td  class="td_gray"><strong>
+        <input type="text" name="NEW_BENE_ACNO" id="NEW_BENE_ACNO" title="Beneficiary Account No" class="CHAR_O" size="35" maxlength="35">
+        </strong></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Country Code</td>
+        <td class="td_gray"><!--select name="BENE_CORR_MED" id="BENE_CORR_MED" class="CHAR_M" title="Beneficiary Correspondence Medium">
+            <option value="Mail">Mail</option>
+            <option value="Email">Email</option>
+            <option value="Fax">Fax</option>
+            <option value="None" selected>None</option>
+        </select-->
+        <input type="text" id="BENE_CNTY_CD" name="BENE_CNTY_CD" title="Beneficiary Country Code" class="CHAR_P" size="3" maxlength="2"></td>
+        <td class="td_gray">Country Code</td>
+        <td class="td_gray"><!--select name="NEW_BENE_LANG" id="NEW_BENE_LANG" class="CHAR_O" title="New Beneficiary Language">
+            <option value="German" >German</option>
+            <option value="English" selected="selected">English</option>
+            <option value="French">French</option>
+            <option value="Italian">Italian</option>
+            <option value="Spanish">Spanish</option>
+          </select-->
+            <!--select name="NEW_BENE_CORR_MED" id="NEW_BENE_CORR_MED" title="New Beneficiary Correspondence Medium" class="CHAR_O" maxlength="35">
+              <option value="" selected></option>
+              <option value="Mail">Mail </option>
+              <option value="Email">Email </option>
+              <option value="Fax">Fax </option>
+              <option value="None">None</option>
+            </select-->        <input type="text" name="NEW_BENE_CNTY" id="NEW_BENE_CNTY" title="Beneficiary Country Code" class="CHAR_O" size="2" maxlength="2"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="title" ><b>'Advise Through' Bank</b> </td>
+        <td class="td_gray"><a onclick="SYT_VisibleNote('ADV_THU_BK_NOTES')" href="#">View Notes</a>
+            <input type="hidden"  name="ADV_THU_BK_NOTES">
+            <input type="hidden" name="ADV_THU_BK_MAIL_ADD" cols="35" rows="6" class="CHAR_P" id="ADV_THU_BK_MAIL_ADD" title="Advise Through Bank Mailing address">
+            <input type="hidden" name="ADV_THU_BK_POST_ADD_BTN" value="..." style="width:25; height:20">
+            <input type="hidden" name="ADV_THU_BK_REF" id="ADV_THU_BK_REF" title="Advise Through Bank Reference" class="CHAR_P" size="16" maxlength="16">
+            <strong>
+            <input type="hidden" name="ADV_THU_BK_TLX" id="ADV_THU_BK_TLX">
+            <input type="hidden" name="ADV_THU_BK_CORR_MED" id="ADV_THU_BK_CORR_MED">			
+        <strong>        </strong></strong></td>
+        <td class="title" ><b>New 'Advise Through' Bank [57] </b> </td>
+        <td class="td_gray"><a onclick="SYT_VisibleNote('NEW_ADV_THU_BK_NOTES')" href="#">View Notes</a>
+            <input type="hidden"  name="NEW_ADV_THU_BK_NOTES"></td>
+      </tr>
+      <tr>
+        <td class="td_gray" width="20%" >Bank ID</td>
+        <td class="td_gray" width="30%"><input name="ADV_THU_BK_ID" id="ADV_THU_BK_ID" title="Advise Through Bank ID" class="CHAR_P" size="12" maxlength="12">
+            <input type="button" name="ADV_THRU_BK_ID_BTN" value="..." style="width:25; height:20" disabled></td>
+        <td class="td_gray" width="20%" >Bank ID</td>
+        <td class="td_gray" width="30%"><input name="NEW_ADV_THU_BK_ID" id="NEW_ADV_THU_BK_ID" title="Advise Through Bank ID" class="CHAR_O" size="12" maxlength="12">
+            <input type="button" name="NEW_ADV_THRU_BK_ID_BTN" value="..." style="width:25; height:20"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Bank Name</td>
+        <td class="td_gray"><input type="text" name="ADV_THU_BK_NM" id="ADV_THU_BK_NM" class="CHAR_P" title="Advise Through Bank Name" size="35" maxlength="35" >
+            <input type="button" name="ADV_THU_BK_ADD_BTN" value="..." style="width:25; height:20"></td>
+        <td class="td_gray">Bank Name</td>
+        <td class="td_gray"><input type="text" name="NEW_ADV_THU_BK_NM" id="NEW_ADV_THU_BK_NM" class="CHAR_O" title="Advise Through Bank Name" size="35" maxlength="35" >
+            <input type="button" name="NEW_ADV_THU_BK_ADD_BTN" value="..." style="width:25; height:20"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Bank Address</td>
+        <td class="td_gray"><input name="ADV_THU_BK_ADD1" id="ADV_THU_BK_ADD1" type="text"  class="CHAR_P"  title="Advise Through Bank Address 1"  size="35" maxlength="35">
+            <input type="hidden" id="ADV_THU_BK_ORDER_POST" name="ADV_THU_BK_ORDER_POST">
+            <input type="hidden" id="ADV_THU_BK_ORDER_NO" name="ADV_THU_BK_ORDER_NO"></td>
+        <td class="td_gray">Bank Address</td>
+        <td class="td_gray"><input name="NEW_ADV_THU_BK_ADD1" id="NEW_ADV_THU_BK_ADD1" type="text"  class="CHAR_O"  title="Advise Through Bank Address 1"  size="35" maxlength="35">
+            <input type="hidden" id="NEW_ADV_THU_BK_ORDER_NO" name="NEW_ADV_THU_BK_ORDER_NO"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="ADV_THU_BK_ADD2" id="ADV_THU_BK_ADD2" type="text"  class="CHAR_P" title=" Advise Through Bank Address 2" size="35" maxlength="35" ></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="NEW_ADV_THU_BK_ADD2" id="NEW_ADV_THU_BK_ADD2" type="text"  class="CHAR_O" title=" Advise Through Bank Address 2" size="35" maxlength="35" ></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="ADV_THU_BK_ADD3" id="ADV_THU_BK_ADD3" type="text"  class="CHAR_P" title=" Advise Through Bank Address 3"size="35" maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="NEW_ADV_THU_BK_ADD3" id="NEW_ADV_THU_BK_ADD3" type="text"  class="CHAR_O" title=" Advise Through Bank Address 3"size="35" maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">SWIFT Address</td>
+        <td class="td_gray"><select name="ADV_THU_BK_SW_TAG" id="ADV_THU_BK_SW_TAG" class="CHAR_P" title="SWIFT Tag" maxlength="1" >
+            <option value="A" >A</option>
+            <option value="B" >B</option>
+            <option value="D" selected >D</option>
+          </select>
+            <input name="ADV_THU_BK_SW_ADD" type="text" class="CHAR_P" id="ADV_THU_BK_SW_ADD" title="Advise Through Bank SWIFT Address" size="11" maxlength="11"></td>
+        <td class="td_gray">SWIFT Address</td>
+        <td class="td_gray"><select name="NEW_ADV_THU_BK_SW_TAG" id="NEW_ADV_THU_BK_SW_TAG" class="CHAR_O" title="SWIFT Tag" maxlength="1" >
+            <option value="A" >A</option>
+            <option value="B" >B</option>
+            <option value="D" selected >D</option>
+          </select>
+            <input name="NEW_ADV_THU_BK_SW_ADD" type="text" class="CHAR_O" id="NEW_ADV_THU_BK_SW_ADD" title="Advise Through Bank SWIFT Address" size="11" maxlength="11"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="title"><b>Reimbursing Bank </b></td>
+        <td class="td_gray"><a  onclick="SYT_VisibleNote('REIM_BK_NOTES')" href="#">View Notes</a>
+            <input type="hidden" name="REIM_BK_NOTES">
+            <input type="hidden" name="REIM_BK_MAIL_ADD" cols="35" rows="6" class="CHAR_P" id="REIM_BK_MAIL_ADD" title="Reimbursing Bank Mailing address">
+            <input type="hidden" name="REIM_BK_POST_ADD_BTN" value="..." style="width:25; height:20" >
+            <input type="hidden" id="REIM_BK_ORDER_POST" name="REIM_BK_ORDER_POST">
+        <input type="hidden"  name="REIM_BK_REF" id="REIM_BK_REF" class="CHAR_P" title="Reimbursing Bank's Reference" size=16  ></td>
+        <td class="title"><b>New Reimbursing Bank [53]</b></td>
+        <td class="td_gray"><a  onclick="SYT_VisibleNote('NEW_REIM_BK_NOTES')" href="#">View Notes</a>
+            <input type="hidden" name="NEW_REIM_BK_NOTES">
+        <input type="hidden" name="NEW_REIM_BK_REF" id="NEW_REIM_BK_REF" class="CHAR_O" title="Reimbursing Bank's Reference" size=16  >
+        <input type="hidden"  name="NEW_REIM_BK_MAIL_ADD" cols="35" rows="6" class="CHAR_O" id="NEW_REIM_BK_MAIL_ADD" title="Reimbursing Bank Mailing address">
+        <input type="hidden" name="NEW_REIM_BK_POST_ADD_BTN" value="..." style="width:25; height:20" >
+        <input type="hidden" id="NEW_REIM_BK_ORDER_POST" name="NEW_REIM_BK_ORDER_POST"></td>
+      </tr>
+      <tr>
+        <td width="20%" class="td_gray">Reimbursement. Authority Required?</td>
+        <td width="30%" class="td_gray" ><select name="REIM_BK_AUTH_REQ" id="REIM_BK_AUTH_REQ" title="Reimbursing Authorisation is Required" class="CHAR_P">
+            <option value="Yes">Yes</option>
+            <option value="No" selected>No</option>
+        </select></td>
+        <td width="20%" class="td_gray">Reimbursement Authority Required?</td>
+        <td width="30%" class="td_gray" ><select name="NEW_REIM_BK_AUTH_REQ" id="NEW_REIM_BK_AUTH_REQ" title="Reimbursing Authorisation is Required" class="CHAR_O">
+            <option value="Yes">Yes</option>
+            <option value="No" selected>No</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td  class="td_gray">ID</td>
+        <td class="td_gray"><input type="text" name="REIM_BK_ID" id="REIM_BK_ID" title="Reimbursing Bank ID (Tag53a)" class="CHAR_P" size="16" maxlength="16" >
+            <input type="button" name="REIM_BK_ID_BTN" value="..." style="width:25; height:20" disabled="disabled"></td>
+        <td  class="td_gray">ID</td>
+        <td class="td_gray"><input type="text" name="NEW_REIM_BK_ID" id="NEW_REIM_BK_ID" title="Reimbursing Bank ID (Tag53a)" class="CHAR_O" size="16" maxlength="16" >
+            <input type="button" name="NEW_REIM_BK_ID_BTN" value="..." style="width:25; height:20"></td>
+      </tr>
+      <tr>
+        <td class="td_gray"> Name</td>
+        <td class="td_gray"><input type="text" name="REIM_BK_NM" id="REIM_BK_NM" title="Reimbursing Bank Name" class="CHAR_P" size="35" maxlength="35">
+            <input type="button" name="REIM_BK_ADD_BTN" value="..." style="width:25; height:20" ></td>
+        <td class="td_gray"> Name</td>
+        <td class="td_gray"><input type="text" name="NEW_REIM_BK_NM" id="NEW_REIM_BK_NM" title="Reimbursing Bank Name" class="CHAR_O" size="35" maxlength="35">
+            <input type="button" name="NEW_REIM_BK_ADD_BTN" value="..." style="width:25; height:20" ></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input type="text" name="REIM_BK_ADD1" id="REIM_BK_ADD1" title="Reimbursing Bank Address1" class="CHAR_P" size="35" maxlength="35" >
+            <input type="hidden" id="REIM_BK_ORDER_NO" name="REIM_BK_ORDER_NO"></td>
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input type="text" name="NEW_REIM_BK_ADD1" id="NEW_REIM_BK_ADD1" title="Reimbursing Bank Address1" class="CHAR_O" size="35" maxlength="35" >
+            <input type="hidden" id="NEW_REIM_BK_ORDER_NO" name="NEW_REIM_BK_ORDER_NO"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="REIM_BK_ADD2" id="REIM_BK_ADD2" title="Reimbursing Bank Address2" class="CHAR_P" size="35" maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="NEW_REIM_BK_ADD2" id="NEW_REIM_BK_ADD2" title="Reimbursing Bank Address2" class="CHAR_O" size="35" maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="REIM_BK_ADD3" id="REIM_BK_ADD3" title="Reimbursing Bank Address3" class="CHAR_P" size="35" maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="NEW_REIM_BK_ADD3" id="NEW_REIM_BK_ADD3" title="Reimbursing Bank Address3" class="CHAR_O" size="35" maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">SWIFT Address</td>
+        <td class="td_gray"><select name="REIM_BK_SW_TAG" id="REIM_BK_SW_TAG" class="CHAR_P" title="Reimbursing Bank SWIFT Tag" maxlength="1" >
+            <option value="A" >A</option>
+            <option value="D" selected>D</option>
+          </select>
+            <input type="text" name="REIM_BK_SW_ADD" id="REIM_BK_SW_ADD" title="Reimbursing Bank SWIFT Address" class="CHAR_P" size="11" maxlength="11"></td>
+        <td class="td_gray">SWIFT Address</td>
+        <td class="td_gray"><select name="NEW_REIM_BK_SW_TAG" id="NEW_REIM_BK_SW_TAG" class="CHAR_O" title="Reimbursing Bank SWIFT Tag" maxlength="1" >
+            <option value="A" >A</option>
+            <option value="D" selected>D</option>
+          </select>
+            <input type="text" name="NEW_REIM_BK_SW_ADD" id="NEW_REIM_BK_SW_ADD" title="Reimbursing Bank SWIFT Address" class="CHAR_O" size="11" maxlength="11"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Correspondence Medium </td>
+        <td class="td_gray"><select name="REIM_BK_CORR_MED" id="REIM_BK_CORR_MED" title="Reimbursing Bank Correspondence Medium" class="CHAR_P">
+       						 <option value="SWIFT">SWIFT auth</option>
+							 <option value="SWIFT-NON">SWIFT non-auth</option>
+							 <option value="Mail">Mail</option>
+							 <option value="Email">Email</option>
+      					     <option value="None" selected="selected">None </option>		
+          </select>
+            <input type="hidden" name="REIM_BK_TLX">
+            <input type="hidden" name="REIM_BK_AC_NO" id="REIM_BK_AC_NO" title="Reimbursing Bank Account Number" class="CHAR_P" size="35" maxlength="35"></td>
+        <td class="td_gray">Correspondence Medium </td>
+        <td class="td_gray"><select name="NEW_REIM_BK_CORR_MED" id="NEW_REIM_BK_CORR_MED" title="Reimbursing Bank Correspondence Medium" class="CHAR_O">
+        <option value="SWIFT">SWIFT auth</option>
+		<option value="SWIFT-NON">SWIFT non-auth</option>
+		<option value="Mail">Mail</option>
+		<option value="Email">Email</option>
+        <option value="None" selected="selected">None </option>		
+          </select>
+            <input type="hidden" name="NEW_REIM_BK_TLX">
+            <input type="hidden" name="NEW_REIM_BK_AC_NO" id="NEW_REIM_BK_AC_NO" title="Reimbursing Bank Account Number" class="CHAR_O" size="35" maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Applicable Rules</td>
+        <td class="td_gray"><select name="APLB_RULE_40F" id="APLB_RULE_40F" title="Applicable Rules (Tag40F)" class="CHAR_P">
+            <option value="NOTURR">NOTURR</option>
+            <option value="URR LATEST VERSION">URR LATEST VERSION</option>
+        </select></td>
+        <td class="td_gray">Applicable Rules</td>
+        <td class="td_gray"><select name="NEW_APLB_RULE_40F" id="NEW_APLB_RULE_40F" title="Applicable Rules (Tag40F)" class="CHAR_O">
+            <option value="NOTURR">NOTURR</option>
+            <option value="URR LATEST VERSION">URR Latest Version</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Reimbursement Charge</td>
+        <td class="td_gray"><select name="REIM_BK_CHG_DESC" class="CHAR_P" id="REIM_BK_CHRG_DESC" title="Reimbursing Bank Charges Description">
+            <option value=""> </option>
+            <option value="CLM">CLM</option>
+            <option value="OUR">OUR</option>
+        </select></td>
+        <td class="td_gray">Reimbursement Charge</td>
+        <td class="td_gray"><select name="NEW_REIM_BK_CHG_DESC" class="CHAR_O" id="NEW_REIM_BK_CHRG_DESC" title="Reimbursing Bank Charges Description">
+            <option value=""> </option>
+            <option value="CLM">CLM</option>
+            <option value="OUR">OUR</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Other Charges[71D]</td>
+        <td class="td_gray"><textarea name="REIM_BK_OTH_CHG_NARR" id="REIM_BK_OTH_CHG_NARR" title="REIM_BK_OTH_CHG_NARR" cols="35" rows="6" class="CHAR_P" maxlength="210"></textarea></td>
+        <td class="td_gray">Other Charges[71D]</td>
+        <td class="td_gray"><textarea name="NEW_REIM_BK_OTH_CHG_NARR" id="NEW_REIM_BK_OTH_CHG_NARR" title="REIM_BK_OTH_CHG_NARR" cols="35" rows="6" class="CHAR_O" maxlength="210"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Sender to Receiver Information[72Z] </td>
+        <td class="td_gray"><textarea name="BK_TO_BK_INFO" id="BK_TO_BK_INFO" title="Bank to Bank Information" cols="35" rows="6" class="CHAR_P" maxlength="140"></textarea></td>
+        <td class="td_gray">Sender to Receiver Information[72Z] </td>
+        <td class="td_gray"><textarea name="NEW_BK_TO_BK_INFO" id="NEW_BK_TO_BK_INFO" title="Bank to Bank Information" cols="35" rows="6" class="CHAR_O" maxlength="210"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">77 Narrative </td>
+        <td class="td_gray"><textarea name="REIM_NARR_TAG_77" id="REIM_NARR_TAG_77" title="Send To Receiver Information" class="CHAR_P" rows=20 cols=35  style="height:160px"></textarea></td>
+        <td class="td_gray">77 Narrative </td>
+        <td class="td_gray"><textarea name="NEW_REIM_NARR_TAG_77" id="NEW_REIM_NARR_TAG_77" title="Send To Receiver Information" class="CHAR_O" rows=20 cols=35  style="height:160px"></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="title"><B>Requested Confirmation Party </B></td>
+        <td class="td_gray"><a onclick="SYT_VisibleNote('CONF_BK_NOTES')" href="#">View Notes</a>
+            <input type="hidden" name="CONF_BK_NOTES"></td>
+        <td class="title"><B>New Requested Confirmation Party [58]</B></td>
+        <td class="td_gray"><a onclick="SYT_VisibleNote('NEW_CONF_BK_NOTES')" href="#">View Notes</a>
+            <input type="hidden" name="NEW_CONF_BK_NOTES"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">ID</td>
+        <td class="td_gray"><input type="text" name="CONF_BK_ID" id="CONF_BK_ID" title="Confirming Bank ID" class="CHAR_P" size="16" maxlength="16" >
+            <input type="button" name="CONF_BK_ID_BTN" id="CONF_BK_ID_BTN" value="..." style="width:25; height:20"></td>
+        <td class="td_gray">ID</td>
+        <td class="td_gray"><input type="text" name="NEW_CONF_BK_ID" id="NEW_CONF_BK_ID" title="Confirming Bank ID" class="CHAR_O" size="16" maxlength="16" >
+            <input type="button" name="NEW_CONF_BK_ID_BTN" id="NEW_CONF_BK_ID_BTN" value="..." style="width:25; height:20"></td>
+      </tr>
+      <tr>
+        <td class="td_gray"> Name</td>
+        <td class="td_gray"><input type="text" name="CONF_BK_NM" id="CONF_BK_NM" title="Confirming Bank Name" class="CHAR_P" size="35" maxlength="35" ></td>
+        <td class="td_gray"> Name</td>
+        <td class="td_gray"><input type="text" name="NEW_CONF_BK_NM" id="NEW_CONF_BK_NM" title="Confirming Bank Name" class="CHAR_O" size="35" maxlength="35" ></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input type="text" name="CONF_BK_ADD1" id="CONF_BK_ADD1" title="Confirming Bank Address1" class="CHAR_P" size="35" maxlength="35"></td>
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input type="text" name="NEW_CONF_BK_ADD1" id="NEW_CONF_BK_ADD1" title="Confirming Bank Address1" class="CHAR_O" size="35" maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="CONF_BK_ADD2" id="CONF_BK_ADD2" title="Confirming Bank Address2" class="CHAR_P" size="35" maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="NEW_CONF_BK_ADD2" id="NEW_CONF_BK_ADD2" title="Confirming Bank Address2" class="CHAR_O" size="35" maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="CONF_BK_ADD3" id="CONF_BK_ADD3" title="Confirming Bank Address3" class="CHAR_P" size="35" maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="NEW_CONF_BK_ADD3" id="NEW_CONF_BK_ADD3" title="Confirming Bank Address3" class="CHAR_O" size="35" maxlength="35"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">SWIFT Address</td>
+        <td class="td_gray"><select name="CONF_BK_SW_TAG" class="CHAR_P" id="CONF_BK_SW_TAG" title="Confirming Bank SWIFT Tag" maxlength="1" >
+            <option value="A" >A</option>
+            <option value="D" selected >D</option>
+          </select>
+            <input type="text" name="CONF_BK_SW_ADD" id="CONF_BK_SW_ADD" title="Confirming Bank SWIFT Address" class="CHAR_P" size="11" maxlength="11"></td>
+        <td class="td_gray">SWIFT Address</td>
+        <td class="td_gray"><select name="NEW_CONF_BK_SW_TAG" class="CHAR_O" id="NEW_CONF_BK_SW_TAG" title="Confirming Bank SWIFT Tag" maxlength="1" >
+            <option value="A" >A</option>
+            <option value="D" selected >D</option>
+          </select>
+            <input type="text" name="NEW_CONF_BK_SW_ADD" id="NEW_CONF_BK_SW_ADD" title="Confirming Bank SWIFT Address" class="CHAR_O" size="11" maxlength="11"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="title"><b>Advising Bank</b></td>
+        <td class="td_gray"><a  onclick="SYT_VisibleNote('ADV_BK_NOTES')" href="#">View Notes</a>
+            <input type="hidden" name="ADV_BK_NOTES">
+            <strong>
+            <input type="hidden" name="ADV_BK_TLX" id="ADV_BK_TLX">
+            <!--<input type="hidden" name="ADV_BK_CORR_MED" id="ADV_BK_CORR_MED">-->
+            <input type="hidden" name="ADV_BK_MAIL_ADD" cols="35" rows="6" class="CHAR_O" id="ADV_BK_MAIL_ADD" title="Advising Bank Mailing address">
+            <input type="hidden" name="ADV_BK_POST_ADD_BTN" value="..." style="width:25; height:20">
+        </strong></td>
+        <td class="title"><b>New Advising Bank </b></td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="20%" class="td_gray">ID</td>
+        <td width="30%" class="td_gray"><input name="ADV_BK_ID" id="ADV_BK_ID" title="Advising Bank ID" class="CHAR_P" size=12 maxlength="12" >
+            <input type="button" name="ADV_BK_ID_BTN" value="..." style="width:25; height:20"  disabled></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray"> Name</td>
+        <td class="td_gray"><input name="ADV_BK_NM" id="ADV_BK_NM" title="Advising Bank Name" class="CHAR_P" size="35" maxlength="35" >
+            <input type="button" name="ADV_BK_ADD_BTN" value="..." style="width:25; height:20"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input name="ADV_BK_ADD1" id="ADV_BK_ADD1" type="text"  class="CHAR_P"  title="Bank Address 1"  size=35 maxlength="35" >
+            <input type="hidden" id="ADV_BK_ORDER_NO" name="ADV_BK_ORDER_NO">
+            <input type="hidden" id="ADV_BK_ORDER_POST" name="ADV_BK_ORDER_POST"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="ADV_BK_ADD2" id="ADV_BK_ADD2" type="text"  class="CHAR_P" title=" Bank Address 2" size=35 maxlength="35" ></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input name="ADV_BK_ADD3" id="ADV_BK_ADD3" type="text"  class="CHAR_P" title=" Bank Address 3"size=35 maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">SWIFT Address</td>
+        <td class="td_gray"><select name="ADV_BK_SW_TAG" id="ADV_BK_SW_TAG"  class="CHAR_P" title="SWIFT Tag" maxlength="1">
+            <option value="A" >A</option>
+            <option value="D" selected >D</option>
+          </select>
+            <input name="ADV_BK_SW_ADD" id="ADV_BK_SW_ADD" type="text" class="CHAR_P" title="Advise Bank Bic Code" size="12" maxlength="11"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">Advising Bank Reference</td>
+        <td class="td_gray"><strong>
+          <input type="text" name="ADV_BK_REF" id="ADV_BK_REF" title="Advising Bank Reference" class="CHAR_M" size="16" maxlength="16">
+        </strong></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">Advising Bank Corespondence Medium</td>
+        <td class="td_gray"><select name="ADV_BK_CORR_MED" id="ADV_BK_CORR_MED" title="Advising Bank Corespondence Medium" class="CHAR_O" maxlength=35>
+        <option value="SWIFT">SWIFT auth</option>
+		<option value="SWIFT-NON">SWIFT non-auth</option>
+		<option value="Mail">Mail</option>
+		<option value="Email">Email</option>
+        <option value="None" selected="selected">None </option>			
+            </select></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">Confirmation Instruction</td>
+        <td class="td_gray"><select name="CONF_INSTR" id="CONF_INSTR" title="Confirmation Instruction" class="CHAR_P" maxlength=35>
+            <option value="CONFIRM" >Confirm</option>
+            <option value="WITHOUT" selected >Without</option>
+            <option value="MAY ADD">May Add</option>
+          </select>
+            </td>
+        <td class="td_gray">New Confirmation Instruction [49]</td>
+        <td class="td_gray"><select name="NEW_CONF_INSTR" id="NEW_CONF_INSTR" title="Confirmation Instruction" class="CHAR_O" maxlength=35>
+            <option value=""selected></option>		
+            <option value="CONFIRM">Confirm</option>
+            <option value="WITHOUT">Without</option>
+            <option value="MAY ADD">May Add</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>    
+    </table> 
+        </td>
+      </tr>
+      <tr>
+        <td align="left" valign="bottom" class="td_gray"><img src="../Images/roundedge_bottom.gif" width="120" height="22"></td>
+      </tr>
+    </table>
+  </div>
+  <div id="C_div" class="HIDDEN_DIV">
+    <table width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="100%" align="left" valign="top"><table width="100%" cellspacing="0" cellpadding="0"> 
+      <tr> 
+        <td colspan="2" class="title">&nbsp;</td> 
+        <td colspan="2" class="title">&nbsp;</td> 
+      </tr> 
+      <tr>
+        <td width="20%" class="title"><b>Issuing Bank [52]</b></td>
+        <td width="30%" class="td_gray"><a  onclick="SYT_GetNote('ISSUE_BK_NOTES')" href="#">View Notes</a>
+            <input type="hidden" name="ISSUE_BK_NOTES"></td> 
+        <td class="title"><b>Applicant Bank [51]</b></td>
+        <td class="td_gray"><a  onclick="SYT_VisibleNote('APPL_BK_NOTES')" href="#">View Notes</a>
+            <input type="hidden" name="APPL_BK_NOTES">
+            <input type="hidden" name="APPL_BK_MAIL_ADD" cols="35" rows="6" class="CHAR_O" id="APPL_BK_MAIL_ADD" title="Applicant Bank Mailing address">
+            <input type="hidden" name="APPL_BK_POST_ADD_BTN" value="..." style="width:25; height:20" >
+            <input type="hidden" id="APPL_BK_ORDER_POST" name="APPL_BK_ORDER_POST">
+            <strong>
+            <input type="hidden" name="APPL_BK_TLX">
+            <input type="hidden" name="APPL_BK_REF" id="APPL_BK_REF"  title="Applicant Bank Reference" class="CHAR_O" size="16" maxlength="16">
+            <input type="hidden" name="APPL_BK_AC_NO" id="APPL_BK_AC_NO" title="Applicant Bank Account Number" class="CHAR_O" size="35" maxlength="35">
+        </strong></td>
+      </tr>
+      <tr>
+        <td class="td_gray">ID </td>
+        <td class="td_gray"><input name="ISSUE_BK_ID" type="text" class="CHAR_O" id="ISSUE_BK_ID" title="Issuing Bank ID" size="16" maxlength="16" length="16">
+            <input name="ISSUE_BK_ID_BTN" type="button" style="width:25; height:20" value="..."></td> 
+        <td class="td_gray" >ID</td>
+        <td class="td_gray" ><input name="APPL_BK_ID" id="APPL_BK_ID" title="Applicant Bank ID" class="CHAR_O" size="12" maxlength="12">
+            <input type="button" name="APPL_BK_BTN" value="..." style="width:25; height:20" ></td>
+      </tr> 
+      <tr>
+        <td class="td_gray">Name</td>
+        <td class="td_gray"><input type="text" name="ISSUE_BK_NM" id="ISSUE_BK_NM" title="Issuing Bank Name" class="CHAR_O" length="35" size="35" maxlength="35">
+            <input name="ISSUE_BK_ADD_BTN" type="button" value="..." style="width:25; height:20"></td> 
+        <td class="td_gray">Name</td>
+        <td class="td_gray"><input name="APPL_BK_NM" type="text" class="CHAR_O" id="APPL_BK_NM" title="Applicant Bank Name" size="35" maxlength="35" >
+            <input type="button" name="APPL_BK_ADD_BTN" value="..." style="width:25; height:20" ></td>
+      </tr> 
+      <tr>
+        <td class="td_gray"> Address</td>
+        <td class="td_gray"><input type="text" name="ISSUE_BK_ADD1" id="ISSUE_BK_ADD1" title="Issuing Bank Address 1" class="CHAR_O" length="35" size="35" maxlength="35">
+            <input type="hidden" name="ISSUE_BK_ORDER_NO"></td> 
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input name="APPL_BK_ADD1" type="text"  class="CHAR_O" id="APPL_BK_ADD1"  title="Applicant Bank Address 1"  size="35" maxlength="35" >
+            <input type="hidden" id="APPL_BK_ORDER_NO" name="APPL_BK_ORDER_NO"></td>
+      </tr> 
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="ISSUE_BK_ADD2" id="ISSUE_BK_ADD2" title="Issuing Bank Address 2" class="CHAR_O" length="35" size="35" maxlength="35"></td> 
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="APPL_BK_ADD2"  id="APPL_BK_ADD2" title="Applicant Bank Address 2" class="CHAR_O" size="35" maxlength="35"></td>
+      </tr> 
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="ISSUE_BK_ADD3" id="ISSUE_BK_ADD3" title="Issuing Bank Address 3" class="CHAR_O" length="35" size="35" maxlength="35"></td> 
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="APPL_BK_ADD3" id="APPL_BK_ADD3" title="Applicant Bank Address 3" class="CHAR_O"size="35" maxlength="35"></td>
+      </tr> 
+      <tr>
+        <td class="td_gray">SWIFT Address</td>
+        <td class="td_gray"><select name="ISSUE_BK_SW_TAG" id="ISSUE_BK_SW_TAG"  class="CHAR_O" title="SWIFT Tag" size="1" maxlength="1">
+            <option value="A" selected>A</option>
+            <option value="D" >D</option>
+          </select>
+            <input name="ISSUE_BK_SW_ADD" type="text" class="CHAR_O" id="ISSUE_BK_SW_ADD" title="Issuing Bank Swift Address" size="11" maxlength="11" length="11"></td>
+        <td class="td_gray">SWIFT Address</td>
+        <td class="td_gray"><select name="APPL_BK_SW_TAG" class="CHAR_P" id="APPL_BK_SW_TAG" title="SWIFT Tag" maxlength="1" >
+            <option value="A" >A</option>
+            <option value="D" selected >D</option>
+          </select>
+            <input name="APPL_BK_SW_ADD" type="text" class="CHAR_O" id="APPL_BK_SW_ADD" title="Applicant Bank SWIFT Address" size="11" maxlength="11"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">Issuing Bank's Reference [23]</td>
+        <td class="td_gray"><input type="text" name="ISSUE_BK_REF" id="ISSUE_BK_REF" title="Issuing Bank's Reference
+" class="CHAR_M" length="16" size="16" maxlength="16"></td>
+        <td class="td_gray">Correspondence Medium</td>
+        <td class="td_gray"><strong>
+          <select name="APPL_BK_CORR_MED" class="CHAR_O" id="APPL_BK_CORR_MED" title="Applicant Bank Corespondence Medium" maxlength="35">
+            <option value="SWIFT">SWIFT auth</option>
+	    	<option value="SWIFT-NON">SWIFT non-auth</option>
+		    <option value="Mail">Mail</option>
+	    	<option value="Email">Email</option>
+            <option value="None" selected="selected">None </option>					
+          </select>
+        </strong></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="20%"  class="title"><b>Non-Bank Issuer [50B] </b></td>
+        <td width="30%" class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray"><p>ID</p></td>
+        <td class="td_gray"><input name="NON_BANK_ISSUER_ID" type="text" class="CHAR_O" id="NON_BANK_ISSUER_ID" title="Non-Bank Issuer ID" size="16" maxlength="16" length="16"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">Name</td>
+        <td class="td_gray"><input type="text" name="NON_BANK_ISSUER_NM" id="NON_BANK_ISSUER_NM" title="Non-Bank Issuer Name" class="CHAR_O" length="35" size="35" maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">Address</td>
+        <td class="td_gray"><input type="text" name="NON_BANK_ISSUER_ADD1" id="NON_BANK_ISSUER_ADD1" title="Non-Bank Issuer Address 1" class="CHAR_O" length="35" size="35" maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="NON_BANK_ISSUER_ADD2" id="NON_BANK_ISSUER_ADD2" title="Non-Bank Issuer Address 1" class="CHAR_O" length="35" size="35" maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray"><input type="text" name="NON_BANK_ISSUER_ADD3" id="NON_BANK_ISSUER_ADD3" title="Non-Bank Issuer Address 1" class="CHAR_O" length="35" size="35" maxlength="35"></td>
+        <td class="td_gray">&nbsp;</td>
+        <td class="td_gray">&nbsp;</td>
+      </tr>
+         
+    </table> 
+</td>
+      </tr>
+      <tr>
+        <td align="left" valign="bottom" class="td_gray"><img src="../Images/roundedge_bottom.gif" width="120" height="22"></td>
+      </tr>
+    </table>
+  </div>
+  <div id="E_div" class="HIDDEN_DIV_DO" style="height:200">
+    <table width="100%" cellspacing="0" cellpadding="0">
+    </table>
+  </div>
+  <div id="F_div" class="hidden_div" ></div>
+  <div id="H_div" class="HIDDEN_DIV">
+    <table width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td colspan="8" align="left" class="title" ><b>Amendment of Description </b><strong>of <b>Goods</b> </strong></td>
+      </tr>
+      <tr> 
+        <td class="td_gray" width="22%">Original Description of Goods [45A]</td>
+        <td width="78%" colspan="3" class="td_gray"><textarea name="GOODS_DESC" id="GOODS_DESC" title="Description of Goods" cols=65 rows=800 style="height:200;"  class="CHAR_O" ></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">New Description of Goods [45B]</td>
+        <td colspan="3" class="td_gray"><textarea name="AMD_DESC_OF_GOODS" id="AMD_DESC_OF_GOODS" cols=65 rows=800 style="height:200;"  class="CHAR_O" title="Amendment Description of Goods" ></textarea>
+          <input type="hidden" name="AMD_GOOD_DESC_BTN" id="AMD_GOOD_DESC_BTN" value="Clause"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td colspan="3" class="td_gray"><strong>Please click CLAUSE button to include description of goods clauses.</strong></td>
+      </tr>
+      <tr valign="bottom">
+        <td class="td_gray" colspan="4"><img src="../Images/roundedge_bottom.gif" width="120" height="22"></td>
+      </tr>
+    </table>
+  </div>
+  <div id="I_div" class="HIDDEN_DIV">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="8" align="left" class="title" ><b>Amendment of Documents Required </b><strong> </strong></td>
+      </tr>
+      <tr>
+        <td class="td_gray" width="22%">Original Documentary Required [46A]</td>
+        <td width="78%" colspan="3" class="td_gray"><textarea name="DOC_REQ" id="DOC_REQ" title="Documents Presented" cols=65 rows=800 style="height:200;"  class="CHAR_O" ></textarea></td>
+      </tr>
+      <tr>
+        <td class="td_gray">New Documents Required [46B]</td>
+        <td colspan="3" class="td_gray"><textarea name="AMD_DOC_REQ" cols=65 rows=800 style="height:200;"  class="CHAR_O" id="AMD_DOC_REQ" title="Amendment Documentary Requirements" ></textarea>
+          <input type="hidden" name="AMD_DOC_REQ_BTN" id="AMD_DOC_REQ_BTN" value="Clause"></td>
+      </tr>
+      <tr>
+        <td class="td_gray">&nbsp;</td>
+        <td colspan="3" class="td_gray"><strong>Please click CLAUSE button to include other 
+          documents required clauses.</strong></td>
+      </tr>
+      <tr>
+        <td class="td_gray" colspan="4"><img src="../Images/roundedge_bottom.gif" width="120" height="22"></td>
+      </tr>
+    </table>
+  </div>  
+  <div id="M_div" class="hidden_div" >
+    <table width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top"><Script language="javascript" src="../JS/MHBK/US/SSSS_SRC_Diary.js?lastchange=1540847128000"></Script>
+
+<!-- BL-1001 Cimon 2008-08-11-->
+<table  width="100%"  cellpadding="0" cellspacing="0">
+  <tr>
+	<!-- @author monroe @date 2012-08-14 @ref EE-6377 edit_s -->
+	<td colspan="4" align="left" class="title"><b>Diary Info</b></td>
+  </tr>	
+  <tr>
+	<td width="15%" class="td_gray">Related Reference</td>
+	<td width="25%" class="td_gray"><input name="DIARY_RELATED_REF" type="text" class="CHAR_O" size="16" maxlength="16"/></td>
+	<td width="15%" class="td_gray">Narrative</td>
+	<td width="45%" class="td_gray" rowspan="4">
+		<textarea name="DIARY_NARRATIVE" rows="6" cols="60" class="CHAR_O" ></textarea>
+	</td>	
+  </tr>
+  <tr>
+	<td width="15%" class="td_gray">Diary Due Date</td> 
+	<!-- @author monroe @date 2012-08-14 @ref EE-6377 edit_E -->
+	<td width="25%" class="td_gray">
+		<!-- @ref EE-6348 @author Jason.yao @date 2012-10-23 EDIT _S -->
+		<!-- <input name="DIARY_DT" type="text" onClick="SYT_doCalendar(this)" class="DATE_O" size="10" title="Diary Due Date"/>-->
+			<input name="DIARY_DT" id="DIARY_DT" type="text" onClick="SYT_doCalendar(this)" class="DATE_O" size="10" title="Diary Due Date"/>
+		<!-- @ref EE-6348 @author Jason.yao @date 2012-10-23 EDIT _E -->
+	</td>
+	<td width="15%" class="td_gray"></td>
+  </tr>  
+  <tr>
+	<td width="15%" class="td_gray"></td>
+	<td width="20%" class="td_gray"></td>
+	<td width="15%" class="td_gray"></td>
+  </tr>	 
+  <tr>
+	<td width="15%" class="td_gray"></td>
+	<td width="20%" class="td_gray">	
+	<!--@author yaoyao @date 2011-12-10 for Diary@ref: EE-5966 removed EE-5681 _S-->
+		<input name="view_1" id="view_1" type="button" value="View History" onclick = "viewDiaryHistory();" style="height:20"/>
+	<!--@author yaoyao @date 2011-12-10 for Diary@ref: EE-5966 removed EE-5681 _E-->
+	</td>
+	<td width="15%" class="td_gray"></td>
+  </tr>		   	  
+</table>
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td align="left" valign="bottom" class="td_gray" colspan="4"><img src="../Images/roundedge_bottom.gif" width="120" height="22"></td>
+      </tr>
+    </table>
+  </div>
+        <div id="N_div" class="HIDDEN_DIV">
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <td align="left" valign="top"></td>  
+    </table>
+  </div>
+  
+<Script language="javascript" src="../JS/MHBK/US/SSSS_SRC_TrxCommon.js?lastchange=1553586394000"></Script>
+
+
+<!-- For CLERK_ID --> 
+<input name="CLERK_ID" type="hidden" maxlength="32">
+<input name="TRX_CCY" type="hidden">
+<input name="CNTY_CODE" type="hidden">
+<!-- For CLERK_ID --> 
+
+<!-- For RMA Checking -->
+<input name="LOGIN_BIC" type="hidden">
+<!-- For RMA Checking -->
+
+<!-- For LC Combine -->
+<input name="DEFER_CHG_AMT_LC_COMBINE" id="DEFER_CHG_AMT_LC_COMBINE" class="AMT_O" type="hidden">
+<!-- For LC Combine -->
+
+
+<!-- For Incoming Swift View-->
+<input name="STP_CODE" type="hidden">
+<input name="STP_MSG_CONTENT" type="hidden">
+<input name="STP_MESSAGE_TYPE" type="hidden">
+<input name="STP_RECV_TIME" type="hidden">
+<input name="STP_ADBIC_LC" type="hidden">
+<!-- For Incoming Swift View-->
+
+
+<!-- For Charge Voucher -->
+<input name="CHG_TRX_DATE" type="hidden" class="DATE_O">
+<input name="CHG_FCUST_CCY" type="hidden">
+<input name="CHG_LOCAL_FX_AMT_DR" type="hidden" class="AMT_O">
+<input name="CHG_LOCAL_FX_AMT_CR" type="hidden" class="AMT_O">
+<input name="CHG_LOCAL_FX_CCY_DR" type="hidden">
+<input name="CHG_LOCAL_FX_CCY_CR" type="hidden">
+<input name="CHG_FOREIGN_FX_AMT_DR" type="hidden" class="AMT_O">
+<input name="CHG_FOREIGN_FX_AMT_CR" type="hidden" class="AMT_O">
+<input name="CHG_CUST_VCH_DESC_DR" type="hidden">
+<input name="CHG_CUST_VCH_DESC_CR" type="hidden">
+<input name="CHG_FOREIGN_FX_CCY_DR" type="hidden">
+<input name="CHG_FOREIGN_FX_CCY_CR" type="hidden">
+<!-- For Charge Voucher -->
+
+<!-- For ADB Export in Voucher-->
+<input name="C_TRANS_CODE" type="hidden">
+<!-- For get exchange rate -->
+<input type="hidden" id="RATE_BASE" name="RATE_BASE" class="INT_O">
+<input type="hidden" id="REAL_RT" name="REAL_RT" class="RATE_O">
+
+<!-- For Liability Voucher-->
+<input name="TEMP_AC_NO1" type="hidden">
+<input name="TEMP_AC_NO2" type="hidden">
+<input name="TEMP_AC_NO3" type="hidden">
+<input name="TEMP_AC_NO4" type="hidden">
+<input name="TEMP_AC_CCY" type="hidden">
+<input name="TEMP_AC_AMT1" type="hidden" class="AMT_O">
+<input name="TEMP_AC_AMT2" type="hidden" class="AMT_O">
+<input name="TEMP_AC_AMT3" type="hidden" class="AMT_O">
+<input name="TEMP_AC_AMT4" type="hidden" class="AMT_O">
+<input name="TEMP_AC_AMT5" type="hidden" class="AMT_O">
+<input name="TEMP_AC_VCH_DESC1" type="hidden">
+<input name="TEMP_AC_VCH_DESC2" type="hidden">
+<input name="TEMP_AC_VCH_DESC3" type="hidden">
+<input name="TEMP_AC_VCH_DESC4" type="hidden">
+<input name="TEMP_AC_VALUE_DT" type="hidden" class="DATE_O">
+<input name="TEMP_AC_BOOK_DT" type="hidden" class="DATE_O">
+<!-- For Liability Voucher-->
+
+<!-- For H.C. INWARD BILLS DISCOUNTED Voucher-->
+<input name="HC_INWARD_BILLS_DIS_NO_D" id="HC_INWARD_BILLS_DIS_NO_D" type="hidden">
+<input name="HC_INWARD_BILLS_DIS_AMT_D" id="HC_INWARD_BILLS_DIS_AMT_D" type="hidden">
+<input name="HC_INWARD_BILLS_DIS_NO_C" id="HC_INWARD_BILLS_DIS_NO_C" type="hidden">
+<input name="HC_INWARD_BILLS_DIS_AMT_C" id="HC_INWARD_BILLS_DIS_AMT_C" type="hidden">
+<input name="HC_INWARD_BILLS_DIS_CCY_D" id="HC_INWARD_BILLS_DIS_CCY_D" type="hidden">
+<input name="HC_INWARD_BILLS_DIS_CCY_C" id="HC_INWARD_BILLS_DIS_CCY_C" type="hidden">
+
+<!-- For H.C. INWARD BILLS DISCOUNTED Voucher-->
+	
+<!-- For LMITS GAPI-->
+<input name="LM_CSL_DESC" id="LM_CSL_DESC" type="hidden">
+<input name="LM_CSL_DESC_C" id="LM_CSL_DESC_C" type="hidden">
+<input name="LM_TRX_CCY" id="LM_TRX_CCY" type="hidden">
+<input name="LM_CUST_ID" id="LM_CUST_ID" type="hidden">
+<input name="LM_FACI_TP" id="LM_FACI_TP" type="hidden">
+<input name="LM_FACI_TP_C" id="LM_FACI_TP_C" type="hidden">
+<input name="LM_REF" id="LM_REF" type="hidden">
+<input name="LM_RCUST_ID" id="LM_RCUST_ID" type="hidden">
+<input name="LM_TRX_AMT" id="LM_TRX_AMT" type="hidden" class="AMT_O">	
+<input name="LM_RSV_LINK" id="LM_RSV_LINK" type="hidden">
+<!-- For LMITS GAPI-->
+	
+
+<!--SWIFT COMMISSION CLACULATION--->
+<input name="C_SWPAY_TIMES" type="hidden">
+<input name="C_SWADVDO_TIMES" type="hidden">
+<input name="C_SWPAYDO_TIMES" type="hidden">
+<input name="C_SWMAIN_TIMES" type="hidden">
+<!--end SWIFT COMMISSION CLACULATION--->
+
+<!--EE CE INTEGRATION TAG MAPPING FILED--->
+<input name="MSG_TYPE" id="MSG_TYPE" type="hidden">
+<input name="WEB_REF" id="WEB_REF" type="hidden">
+<!--EE CE INTEGRATION TAG MAPPING FILED--->
+
+<!--Eloan GAPI--->
+<input type="hidden" id="E_UNIT_CODE" name="E_UNIT_CODE">
+<input type="hidden" id="E_BORROWER_ID" name="E_BORROWER_ID">
+<input type="hidden" id="E_BORROWER_ID_ACCEPT" name="E_BORROWER_ID_ACCEPT">
+<input type="hidden" id="E_ACCOUNT_TYPE" name="E_ACCOUNT_TYPE">
+<input type="hidden" id="E_ACCOUNT_TYPE_ACCEPT" name="E_ACCOUNT_TYPE_ACCEPT">
+<input type="hidden" id="E_UNPAID_CONFIRM_COMM_CCY" name="E_UNPAID_CONFIRM_COMM_CCY">
+<input type="hidden" id="E_ORG_UNPAID_CONFIRM_COMM_CCY" name="E_ORG_UNPAID_CONFIRM_COMM_CCY">
+<input type="hidden" id="E_UNPAID_CONFIRM_COMM_AMT" name="E_UNPAID_CONFIRM_COMM_AMT" class="AMT_O">
+<input type="hidden" id="E_UNPAID_ACCEPT_COMM_CCY" name="E_UNPAID_ACCEPT_COMM_CCY">
+<input type="hidden" id="E_ORG_UNPAID_ACCEPT_COMM_CCY" name="E_ORG_UNPAID_ACCEPT_COMM_CCY">
+<input type="hidden" id="E_UNPAID_ACCEPT_COMM_AMT" name="E_UNPAID_ACCEPT_COMM_AMT" class="AMT_O">
+<input type="hidden" id="E_FUNCTION_ID" name="E_FUNCTION_ID">
+<input type="hidden" id="E_PAID_CONFIRM_COMM_CCY" name="E_PAID_CONFIRM_COMM_CCY">
+<input type="hidden" id="E_PAID_CONFIRM_COMM_AMT" name="E_PAID_CONFIRM_COMM_AMT" class="AMT_O">
+<input type="hidden" id="E_PAID_ACCEPT_COMM_CCY" name="E_PAID_ACCEPT_COMM_CCY">
+<input type="hidden" id="E_PAID_ACCEPT_COMM_AMT" name="E_PAID_ACCEPT_COMM_AMT" class="AMT_O">
+<input type="hidden" id="E_DEFERRED_UNPAID_ACCEPT_COMM_AMT" name="E_DEFERRED_UNPAID_ACCEPT_COMM_AMT" class="AMT_O">
+<input type="hidden" id="E_DEFERRED_UNPAID_CONFIRM_COMM_AMT" name="E_DEFERRED_UNPAID_CONFIRM_COMM_AMT" class="AMT_O">
+<input type="hidden" id="E_DEFERRED_PAID_ACCEPT_COMM_AMT" name="E_DEFERRED_PAID_ACCEPT_COMM_AMT" class="AMT_O">
+<input type="hidden" id="E_DEFERRED_PAID_CONFIRM_COMM_AMT" name="E_DEFERRED_PAID_CONFIRM_COMM_AMT" class="AMT_O">
+<input type="hidden" id="E_DEFERRED_PAID_ACCEPT_COMM_CCY" name="E_DEFERRED_PAID_ACCEPT_COMM_CCY">
+<input type="hidden" id="E_DEFERRED_PAID_CONFIRM_COMM_CCY" name="E_DEFERRED_PAID_CONFIRM_COMM_CCY">
+<input type="hidden" id="E_RATE" name="E_RATE" class="RATE_O">
+<input type="hidden" id="E_REF_NO" name="E_REF_NO">
+<input type="hidden" id="E_CCY_DECIMAL" name="E_CCY_DECIMAL">
+<input type="hidden" id="E_DUE_DATE" name="E_DUE_DATE" class="DATE_O">
+<input type="hidden" id="E_DUE_DATE_ACCEPT" name="E_DUE_DATE_ACCEPT" class="DATE_O">
+<input type="hidden" id="E_TRX_DT" name="E_TRX_DT" class="DATE_O">
+<input type="hidden" id="E_NEW_EXPIRY_DT" name="E_NEW_EXPIRY_DT" class="DATE_O">
+<input type="hidden" id="E_DISCOUNT_TIMES" name="E_DISCOUNT_TIMES" >
+<input type="hidden" id="E_SETTLEPARTIALPAY_TIMES" name="E_SETTLEPARTIALPAY_TIMES" >
+<input type="hidden" id="E_CLAIMNOTE_TIMES" name="E_CLAIMNOTE_TIMES" >
+<input type="hidden" id="E_IA_Y_EQVL_INT" name="E_IA_Y_EQVL_INT" class="AMT_O">
+<input type="hidden" id="E_IA_Y_EQVL_INT_ACCEPT" name="E_IA_Y_EQVL_INT_ACCEPT" class="AMT_O">
+<input type="hidden" id="E_IA_C_DIS_CUSTCCY" name="E_IA_C_DIS_CUSTCCY" >
+<input type="hidden" id="E_IA_Y_PAID_INT" name="E_IA_Y_PAID_INT" class="AMT_O">
+<input type="hidden" id="E_IA_C_DIS_LOCALCCY" name="E_IA_C_DIS_LOCALCCY">
+<input type="hidden" id="E_EPLC_CONF_COMM_TRX_AMT" name="E_EPLC_CONF_COMM_TRX_AMT" class="AMT_O">
+<input type="hidden" id="E_EPLC_COMBIN_1_CHG_TRX_AMT" name="E_EPLC_COMBIN_1_CHG_TRX_AMT" class="AMT_O">
+<input type="hidden" id="E_EPLC_ALLINFLAT_CHG_TRX_AMT" name="E_EPLC_ALLINFLAT_CHG_TRX_AMT" class="AMT_O">
+<input type="hidden" id="E_EPLC_UTIL_DEF_CHG_TRX_AMT" name="E_EPLC_UTIL_DEF_CHG_TRX_AMT" class="AMT_O">
+<input type="hidden" id="E_EPLC_COMBIN_2_CHG_TRX_AMT" name="E_EPLC_COMBIN_2_CHG_TRX_AMT" class="AMT_O">
+<input type="hidden" id="E_EPLC_CONFUTIL_CHG_TRX_AMT" name="E_EPLC_CONFUTIL_CHG_TRX_AMT" class="AMT_O">
+<input type="hidden" id="E_C_REF_NO_C_IN" name="E_C_REF_NO_C_IN">
+<input type="hidden" id="E_ORG_OUR_ENG_ADV_LC" name="E_ORG_OUR_ENG_ADV_LC">
+<input type="hidden" id="E_MAIN_REF" name="E_MAIN_REF">
+<input type="hidden" id="E_SEND_DOC_FLAG" name="E_SEND_DOC_FLAG">
+<input type="hidden" id="E_GTEE_ISSUE_COMM_TRX_AMT" name="E_GTEE_ISSUE_COMM_TRX_AMT" class="AMT_O">
+<input type="hidden" id="E_CFNC_I_BASIC_DAYS" name="E_CFNC_I_BASIC_DAYS">
+<input type="hidden" id="E_CFNC_D_DUE_DT" name="E_CFNC_D_DUE_DT" class="DATE_O">
+<input type="hidden" id="E_IA_Y_REACC_INT" name="E_IA_Y_REACC_INT" class="AMT_O">
+<input type="hidden" id="E_IA_Y_TRX_AMT" name="E_IA_Y_TRX_AMT" class="AMT_O">
+<input type="hidden" id="E_IA_D_TRX_VALDATE" name="E_IA_D_TRX_VALDATE" class="DATE_O">
+<input type="hidden" id="E_IA_D_DUE_DATE" name="E_IA_D_DUE_DATE" class="DATE_O">
+<input type="hidden" id="E_IA_I_CCY_DEC" name="E_IA_I_CCY_DEC" class="INT_O">
+<input type="hidden" id="E_IA_N_FIX_BAS_RATE" name="E_IA_N_FIX_BAS_RATE" class="RATE_O">
+<input type="hidden" id="E_IA_N_FIX_SPR_RATE" name="E_IA_N_FIX_SPR_RATE" class="RATE_O">	
+<input type="hidden" id="E_IA_I_BASE_DAYS" name="E_IA_I_BASE_DAYS" class="INT_O">
+<input type="hidden" id="E_IA_C_MODU_NAME" name="E_IA_C_MODU_NAME">
+<input type="hidden" id="E_IA_C_CCY_CODE" name="E_IA_C_CCY_CODE">
+<input type="hidden" id="E_IA_D_CREATE_DATE" name="E_IA_D_CREATE_DATE" class="DATE_O">
+	<!--end Eloan GAPI--->
+
+<!-- For PYMT VOUCHER -->
+<input name="CHG_PRE_ADV_COMM_AC" id="CHG_PRE_ADV_COMM_AC" type="hidden" class="CHAR_O">
+<!----------------------------------------------->
+
+
+<!-- For DISCOUNT Grace Days Period Days -->
+<input name="TEMP_CFNC_D_DUE_DT" id="TEMP_CFNC_D_DUE_DT" type="hidden" class="DATE_O">
+<!----------------------------------------------->
+
+<!-- For Acuity Compliance Check -->
+<input name="C_COMPLIANCE_STATUS" id="C_COMPLIANCE_STATUS" type="hidden">
+<input name="C_COMPLIANCE_NOTE" id="C_COMPLIANCE_NOTE" type="hidden">
+<!----------------------------------------------->
+
+<!-- For CE EE GAPI -->
+<input name="CHG_ACNO" id="CHG_ACNO" type="hidden">
+<!--<input name="CUST_AC_NO" id="CUST_AC_NO" type="hidden">-->
+<!----------------------------------------------->
+
+<!-- For Charge Debit Advice start-->
+     <input type="hidden" name="TEMP_CHG_AMT1" class="AMT_O">
+     <input type="hidden" name="TEMP_CHG_AMT2" class="AMT_O">	 
+     <input type="hidden" name="TEMP_CHG_AMT3" class="AMT_O">
+     <input type="hidden" name="TEMP_CHG_AMT4" class="AMT_O">	 
+     <input type="hidden" name="TEMP_CHG_AMT5" class="AMT_O">	 
+     <input type="hidden" name="TEMP_CHG_AMT6" class="AMT_O">	 
+     <input type="hidden" name="TEMP_CHG_AMT7" class="AMT_O">
+     <input type="hidden" name="TEMP_CHG_AMT8" class="AMT_O"> 
+     <input type="hidden" name="TEMP_CHG_AMT9" class="AMT_O"> 
+     <input type="hidden" name="TEMP_CHG_AMT10" class="AMT_O"> 
+     <input type="hidden" name="TEMP_CHG_AMT11" class="AMT_O"> 
+     <input type="hidden" name="TEMP_CHG_AMT12" class="AMT_O">	 
+<!-- For Charge Debit Advice end-->
+<!-- For GBase mapping -start-->
+
+  <input type="hidden" name="GBASE_RETURN_CODE" id="GBASE_RETURN_CODE" value = "">
+  <input type="hidden" name="GBASE_RETURN_DESC" id="GBASE_RETURN_DESC" value = "">  
+  <input type="hidden" name="GBASE_RETURN_STATUS" id="GBASE_RETURN_STATUS" value = ""> 
+  <input type="hidden" name="CHG_GL_AC_NUM" id="CHG_GL_AC_NUM" value = "">
+  <input type="hidden" name="CHG_C_AC_TITLE" id="CHG_C_AC_TITLE" value = "">
+  <input type="hidden" name="GB_DR_AC_NUM" id="GB_DR_AC_NUM" value = "">
+  <input type="hidden" name="GB_DR_AC_TITLE" id="GB_DR_AC_TITLE" value = ""> 
+  <input type="hidden" name="GB_CR_AC_NUM" id="GB_CR_AC_NUM" value = "">
+  <input type="hidden" name="GB_CR_AC_TITLE" id="GB_CR_AC_TITLE" value = ""> 
+    
+  <input type="hidden" name="GB_CHG_TTL_OTH" id="GB_CHG_TTL_OTH" class="AMT_O">
+  <input type="hidden" name="GB_CHG_TTL_COMM" id="GB_CHG_TTL_COMM" class="AMT_O">    
+  <input type="hidden" name="GB_CHG_TTL" id="GB_CHG_TTL"  class="AMT_O" value = "">  
+  <input type="hidden" name="GB_CHG_OPEN_COMM" id="GB_CHG_OPEN_COMM" class="AMT_O">
+  <input type="hidden" name="GB_CHG_AMD_COMM" id="GB_CHG_AMD_COMM"  class="AMT_O" value = "">
+  <input type="hidden" name="GB_CHG_TTL_INCOME" id="GB_CHG_TTL_INCOME"  class="AMT_O" value = ""> 
+  <input type="hidden" name="GB_CHG_TTL_TELECOM" id="GB_CHG_TTL_TELECOM"  class="AMT_O" value = ""> 
+  <input type="hidden" name="GB_CHG_TTL_ACPT" id="GB_CHG_TTL_ACPT" value = "">
+  <input type="hidden" name="GB_EXCO_AC_INFO_1" id="GB_EXCO_AC_INFO_1" value = "">
+  <input type="hidden" name="GB_EXCO_AC_INFO_2" id="GB_EXCO_AC_INFO_2" value = "">
+  <input type="hidden" name="GB_EXCO_AC_INFO_3" id="GB_EXCO_AC_INFO_3" value = "">
+  <input type="hidden" name="GB_EXCO_AC_INFO_4" id="GB_EXCO_AC_INFO_4" value = "">
+  <input type="hidden" name="GB_MOV_AMT" id="GB_MOV_AMT" class="AMT_O">
+  <input type="hidden" name="GB_MOV_AMT_DEC" id="GB_MOV_AMT_DEC" class="AMT_O">  
+  <input type="hidden" name="GB_MOV_AMT_INC" id="GB_MOV_AMT_INC" class="AMT_O">    
+  <input type="hidden" name="GB_TTL_PAY_CHG_AMT" id="GB_TTL_PAY_CHG_AMT" class="AMT_O">
+  <input type="hidden" name="GB_TTL_PAY_CHG_AMT_SEP" id="GB_TTL_PAY_CHG_AMT_SEP" class="AMT_O">  
+  <input type="hidden" name="GB_CHG_FLD_ALL_CHARGE_AT" id="GB_CHG_FLD_ALL_CHARGE_AT" value = "">
+  <input type="hidden" name="GB_CHG_FLD_ALL_CHARGE_FOR" id="GB_CHG_FLD_ALL_CHARGE_FOR" value = "">  
+  <input type="hidden" name="GB_ALL_OTH_CHG_PD" id="GB_ALL_OTH_CHG_PD" class="AMT_O">
+  <input type="hidden" name="GB_ALL_OTH_CHG_UNPD" id="GB_ALL_OTH_CHG_UNPD" class="AMT_O">
+  <input type="hidden" name="GB_TEL_POST_COU_PD" id="GB_TEL_POST_COU_PD" class="AMT_O">
+  <input type="hidden" name="GB_TEL_POST_COU_UNPD" id="GB_TEL_POST_COU_UNPD" class="AMT_O">
+  <input type="hidden" name="GB_CHG_TTL_AUTO" id="GB_CHG_TTL_AUTO" class="AMT_O">
+  <input type="hidden" name="GB_CHG_TTL_COMM_AUTO" id="GB_CHG_TTL_COMM_AUTO" class="AMT_O">
+  <input type="hidden" name="GB_CHG_TTL_OTH_AUTO" id="GB_CHG_TTL_OTH_AUTO" class="AMT_O">  
+  <input type="hidden" name="GB_CHG_TTL_OTH_F" id="GB_CHG_TTL_OTH_F" class="AMT_O">
+  <input type="hidden" name="GB_CHG_TTL_OTH_F_AUTO" id="GB_CHG_TTL_OTH_F_AUTO" class="AMT_O">  
+  <input type="hidden" name="GB_CHG_TTL_COMM_F" id="GB_CHG_TTL_COMM_F" class="AMT_O">  
+  <input type="hidden" name="GB_CHG_ACCT_COMM_F" id="GB_CHG_ACCT_COMM_F" class="AMT_O">
+  <input type="hidden" name="GB_CHG_ACCT_COMM_F_AUTO" id="GB_CHG_ACCT_COMM_F_AUTO" class="AMT_O">  
+  <input type="hidden" name="GB_CHG_ACCT_COMM" id="GB_CHG_ACCT_COMM" class="AMT_O">  
+  <input type="hidden" name="GB_CHG_ACCT_COMM_AUTO" id="GB_CHG_ACCT_COMM_AUTO" class="AMT_O">
+  <input type="hidden" name="GB_CHG_OPEN_COMM_AUTO" id="GB_CHG_OPEN_COMM_AUTO" class="AMT_O">
+  <input type="hidden" name="GB_CHG_AMD_COMM_AUTO" id="GB_CHG_AMD_COMM_AUTO" class="AMT_O">
+  <input type="hidden" name="GB_CHG_SWIFT_COMM_AUTO" id="GB_CHG_SWIFT_COMM_AUTO" class="AMT_O">
+  <input type="hidden" name="GB_CHG_POSTAGE_COMM_AUTO" id="GB_CHG_POSTAGE_COMM_AUTO" class="AMT_O">
+  <input type="hidden" name="GB_CHG_OTH_COMM_AUTO" id="GB_CHG_OTH_COMM_AUTO" class="AMT_O"> 
+  <input type="hidden" name="GB_CHG_HANDING_COMM_AUTO" id="GB_CHG_HANDING_COMM_AUTO" class="AMT_O">
+  <input type="hidden" name="GB_CHG_EXAM_COMM_AUTO" id="GB_CHG_EXAM_COMM_AUTO" class="AMT_O">
+
+  <input type="hidden" name="GB_CHG_SWIFT_COMM" id="GB_CHG_SWIFT_COMM" class="AMT_O">
+  <input type="hidden" name="GB_CHG_POSTAGE_COMM" id="GB_CHG_POSTAGE_COMM" class="AMT_O">
+  <input type="hidden" name="GB_CHG_OTH_COMM" id="GB_CHG_OTH_COMM" class="AMT_O">
+  <input type="hidden" name="GB_CHG_HANDING_COMM" id="GB_CHG_HANDING_COMM" class="AMT_O">
+  <input type="hidden" name="GB_CHG_EXAM_COMM" id="GB_CHG_EXAM_COMM" class="AMT_O">
+  <input type="hidden" name="GB_CHG_PAY_RATE" id="GB_CHG_PAY_RATE" class="RATE_O">
+  <input type="hidden" name="GB_CHG_PAY_CCY" id="GB_CHG_PAY_CCY" class="CHAR_O">  
+  
+
+  <!--DISCOUNT DO for GBASE START---->
+  <input type="hidden" name="GB_DSCT_INT_PAY_AT" id="GB_DSCT_INT_PAY_AT" value = "">
+  <input type="hidden" name="GB_CFNC_C_PAY_BY" id="GB_CFNC_C_PAY_BY" value = "">  
+  <input type="hidden" name="GB_CFNC_D_DT" id="GB_CFNC_D_DT" class="DATE_O">
+  <input type="hidden" name="GB_CFNC_D_DUE_DT" id="GB_CFNC_D_DUE_DT" class="DATE_O">
+  <input type="hidden" name="GB_CFNC_N_RT" id="GB_CFNC_N_RT" class="RATE_O">
+  <input type="hidden" name="GB_CFNC_N_MARGIN_RT" id="GB_CFNC_N_MARGIN_RT" class="RATE_O">
+  <input type="hidden" name="GB_CFNC_N_LIBOR_RT" id="GB_CFNC_N_LIBOR_RT" class="RATE_O">  
+  <input type="hidden" name="GB_SPREAD" id="GB_SPREAD" class="RATE_O">
+  <!--DISCOUNT DO for GBASE END---->
+  
+  <!--C_HOGL_AC_NUM--C_AC_TITLE-->
+  <input name="GAPI_CONSTRUCT_STR_1" type="hidden" id="GAPI_CONSTRUCT_STR_1">   
+  <input name="GAPI_CONSTRUCT_STR_2" type="hidden" id="GAPI_CONSTRUCT_STR_2">   
+  <input name="GAPI_CONSTRUCT_STR_3" type="hidden" id="GAPI_CONSTRUCT_STR_3">  
+  <input name="GAPI_CONSTRUCT_STR_4" type="hidden" id="GAPI_CONSTRUCT_STR_4">
+  <input name="GAPI_CONSTRUCT_STR_5" type="hidden" id="GAPI_CONSTRUCT_STR_5">
+  <input name="GAPI_CONSTRUCT_STR_6" type="hidden" id="GAPI_CONSTRUCT_STR_6">  
+  <input name="GAPI_CONSTRUCT_STR_AUTO_1" type="hidden" id="GAPI_CONSTRUCT_STR_AUTO_1">  
+  <input name="GAPI_CONSTRUCT_STR_AUTO_2" type="hidden" id="GAPI_CONSTRUCT_STR_AUTO_2">  
+  <input name="GAPI_CONSTRUCT_STR_AUTO_3" type="hidden" id="GAPI_CONSTRUCT_STR_AUTO_3">  
+  <input name="GAPI_CONSTRUCT_STR_AUTO_4" type="hidden" id="GAPI_CONSTRUCT_STR_AUTO_4">  
+  <input name="GAPI_CONSTRUCT_STR_AUTO_5" type="hidden" id="GAPI_CONSTRUCT_STR_AUTO_5">  
+  
+  
+  
+  <!--Payment DO for GBASE---->
+  <input type="hidden" name="GB_CPYT_DR_BUY_RATE" id="GB_CPYT_DR_BUY_RATE" class="RATE_O"> 
+  <input type="hidden" name="GB_CPYT_DR_CCY" id="GB_CPYT_DR_CCY" class="CHAR_O">
+  <input type="hidden" name="GB_CPYT_DR_AMT_DRCCY" id="GB_CPYT_DR_AMT_DRCCY" class="AMT_O"> 
+  <input type="hidden" name="GB_CPYT_DR_AC" id="GB_CPYT_DR_AC" class="CHAR_O">   
+  <input type="hidden" name="GB_CPYT_DR_AC_TYPE" id="GB_CPYT_DR_AC_TYPE" class="CHAR_O">   
+  <input type="hidden" name="GB_CPYT_CR_BUY_RATE" id="GB_CPYT_CR_BUY_RATE" class="RATE_O">    
+  <input type="hidden" name="GB_CPYT_CR_CCY" id="GB_CPYT_CR_CCY" class="CHAR_O"> 
+  <input type="hidden" name="GB_CPYT_CR_AMT_CRCCY" id="GB_CPYT_CR_AMT_CRCCY" class="AMT_O"> 
+  <input type="hidden" name="GB_CPYT_CR_AC" id="GB_CPYT_CR_AC" class="CHAR_O"> 
+  <input type="hidden" name="GB_CPYT_CR_AC_TYPE" id="GB_CPYT_CR_AC_TYPE" class="CHAR_O">  
+  <input type="hidden" name="GB_X202_ACC_BKID_57A" id="GB_X202_ACC_BKID_57A" class="CHAR_O">  
+  <input type="hidden" name="GB_CPYT_DR_BUY_RATE_AUTO" id="GB_CPYT_DR_BUY_RATE_AUTO" class="RATE_O">
+  <input type="hidden" name="GB_CPYT_DR_CCY_AUTO" id="GB_CPYT_DR_CCY_AUTO" >    
+  <input type="hidden" name="MZ_AMT_IN_WORDS" id="MZ_AMT_IN_WORDS" >        
+<!-- For GBase mapping -end-->
+
+
+<script language="javascript">
+document.MAINFORM.LOGIN_BIC.value= SYS_LOGIN_BIC;
+</script>
+
+  <div id="F_div" class="HIDDEN_DIV">
+  <table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <!--<tr>
+    <td colspan="4" class="title"><b>Notes</b></td>
+    </tr>
+    <td width="20%" class="td_gray">Charge Notes For Applicant</td>
+    <td width="30%" class="td_gray"><textarea name="CHG_NOTES_APPL" id="CHG_NOTES_APPL" title="Notes" class="CHAR_O" rows="60" cols="50"style="height:95; "></textarea></td>
+    <td width="20%" class="td_gray">Charge Notes For Beneficiary</td>
+    <td width="30%" class="td_gray"><textarea name="CHG_NOTES_BENE" id="CHG_NOTES_BENE" title="Notes" class="CHAR_O" rows="60" cols="50"style="height:95; "></textarea></td>
+  </tr>-->
+  <tr>
+    <td width="20%" class="td_gray">Notes</td>
+    <td width="80%" colspan="3" class="td_gray"><textarea name="NOTES" id="NOTES" title="Notes" class="CHAR_O" rows="60" cols="50"style="height:95; "></textarea></td>
+    </tr>   
+  <tr>    	
+</table>
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="bottom" class="td_gray" colspan="10"><img src="../Images/roundedge_bottom.gif" width="120" height="22"></td>
+    </tr>
+  </table>
+  </div>
+</form>
+</body>
+</html>  
+<script language="javascript">			
+DoFrame.init('/EximBillWeb');			
+DoFrame.showDO("AdivceForBankCust","E_div","Advice For Bank and Customer",null,null,null,null,true);					
+DoFrame.getTemplate();
+</script>
